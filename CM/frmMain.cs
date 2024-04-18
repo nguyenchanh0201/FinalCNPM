@@ -33,5 +33,27 @@ namespace CM
         {
             AddControls(new frmCategoryView());
         }
+
+        private void btnTable_Click(object sender, EventArgs e)
+        {
+            AddControls(new frmTableCardView());
+        }
+
+        private void btnStaff_Click(object sender, EventArgs e)
+        {
+            AddControls(new frmStaffView());
+        }
+
+
+        private void btnClose_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnMini_Click(object sender, EventArgs e)
+        {
+            //Minimize the form
+            WindowState = FormWindowState.Minimized; 
+        }
     }
 }

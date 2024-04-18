@@ -117,10 +117,10 @@
         #endregion
 
         private Panel panel1;
-        private Label label1;
         private PictureBox pictureBox1;
         private Panel panel2;
         private Button bClose;
         private Button bSave;
+        public Label label1;
     }
 }

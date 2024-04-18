@@ -13,9 +13,7 @@ namespace CM
             frmMain f = new frmMain();
             this.Hide();
             f.ShowDialog();
-            this.Show();
-            
-
+            this.Close();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
