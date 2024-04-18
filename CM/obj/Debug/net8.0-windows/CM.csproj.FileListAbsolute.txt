@@ -18,3 +18,10 @@ D:\Study\HK2-2024\Software Tech\CM\CM\obj\Debug\net8.0-windows\CM.frmLogin.resou
 D:\Study\HK2-2024\Software Tech\CM\CM\obj\Debug\net8.0-windows\CM.frmMain.resources
 D:\Study\HK2-2024\Software Tech\CM\CM\obj\Debug\net8.0-windows\CM.frmAdd.resources
 D:\Study\HK2-2024\Software Tech\CM\CM\obj\Debug\net8.0-windows\CM.frmCategoryView.resources
+D:\Study\HK2-2024\Software Tech\CM\CM\obj\Debug\net8.0-windows\CM.frmCategoryAdd.resources
+D:\Study\HK2-2024\Software Tech\CM\CM\obj\Debug\net8.0-windows\CM.sourcelink.json
+D:\Study\HK2-2024\Software Tech\CM\CM\obj\Debug\net8.0-windows\CM.frmStaffView.resources
+D:\Study\HK2-2024\Software Tech\CM\CM\obj\Debug\net8.0-windows\CM.frmTableCardView.resources
+D:\Study\HK2-2024\Software Tech\CM\CM\obj\Debug\net8.0-windows\CM.frmProductDetails.resources
+D:\Study\HK2-2024\Software Tech\CM\CM\obj\Debug\net8.0-windows\CM.frmProductView.resources
+D:\Study\HK2-2024\Software Tech\CM\CM\obj\Debug\net8.0-windows\CM.frmStaffDetails.resources
