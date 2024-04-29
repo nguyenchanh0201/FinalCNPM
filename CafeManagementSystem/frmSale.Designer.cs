@@ -66,7 +66,7 @@
             this.bHome.Name = "bHome";
             this.bHome.Size = new System.Drawing.Size(295, 83);
             this.bHome.TabIndex = 14;
-            this.bHome.Text = "Home";
+            this.bHome.Text = "   Manage Customer";
             this.bHome.UseVisualStyleBackColor = true;
             // 
             // button1
@@ -79,7 +79,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(295, 83);
             this.button1.TabIndex = 15;
-            this.button1.Text = "Home";
+            this.button1.Text = "        Manage Table Cards";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // button2
@@ -92,7 +92,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(295, 83);
             this.button2.TabIndex = 16;
-            this.button2.Text = "Home";
+            this.button2.Text = "Place Order";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button3
@@ -105,7 +105,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(295, 83);
             this.button3.TabIndex = 17;
-            this.button3.Text = "Home";
+            this.button3.Text = "      Manage Order type";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // frmSale

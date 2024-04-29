@@ -11,3 +11,16 @@ D:\Study\HK2-2024\Software Tech\CafeManagementSystem\CafeManagementSystem\obj\De
 D:\Study\HK2-2024\Software Tech\CafeManagementSystem\CafeManagementSystem\obj\Debug\CafeManagementSystem.frmMain.resources
 D:\Study\HK2-2024\Software Tech\CafeManagementSystem\CafeManagementSystem\obj\Debug\CafeManagementSystem.frmHome.resources
 D:\Study\HK2-2024\Software Tech\CafeManagementSystem\CafeManagementSystem\obj\Debug\CafeManagementSystem.frmSale.resources
+C:\Users\ASUS\Source\Repos\New\CafeManagementSystem\bin\Debug\CafeManagementSystem.exe.config
+C:\Users\ASUS\Source\Repos\New\CafeManagementSystem\bin\Debug\CafeManagementSystem.exe
+C:\Users\ASUS\Source\Repos\New\CafeManagementSystem\bin\Debug\CafeManagementSystem.pdb
+C:\Users\ASUS\Source\Repos\New\CafeManagementSystem\obj\Debug\GUI.csproj.AssemblyReference.cache
+C:\Users\ASUS\Source\Repos\New\CafeManagementSystem\obj\Debug\CafeManagementSystem.frmHome.resources
+C:\Users\ASUS\Source\Repos\New\CafeManagementSystem\obj\Debug\CafeManagementSystem.frmLogin.resources
+C:\Users\ASUS\Source\Repos\New\CafeManagementSystem\obj\Debug\CafeManagementSystem.frmMain.resources
+C:\Users\ASUS\Source\Repos\New\CafeManagementSystem\obj\Debug\CafeManagementSystem.frmSale.resources
+C:\Users\ASUS\Source\Repos\New\CafeManagementSystem\obj\Debug\CafeManagementSystem.Properties.Resources.resources
+C:\Users\ASUS\Source\Repos\New\CafeManagementSystem\obj\Debug\GUI.csproj.GenerateResource.cache
+C:\Users\ASUS\Source\Repos\New\CafeManagementSystem\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Source\Repos\New\CafeManagementSystem\obj\Debug\CafeManagementSystem.exe
+C:\Users\ASUS\Source\Repos\New\CafeManagementSystem\obj\Debug\CafeManagementSystem.pdb
