@@ -176,5 +176,11 @@
   <ItemGroup>
     <None Include="Resources\icons8-clock-1001.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{de224c1f-88df-4299-a16c-401085c724a1}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

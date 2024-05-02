@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BLL;
 
 namespace CafeManagementSystem
 {
     public partial class frmMain : Form
     {
+
         public frmMain()
         {
             InitializeComponent();
@@ -85,9 +87,10 @@ namespace CafeManagementSystem
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            
             AddControls(new frmHome());
             timer1.Start();
+            lbUser.Text = frmLogin.username;
+            roleLabel.Text = frmLogin.role;
         }
 
         private void bMini_Click(object sender, EventArgs e)

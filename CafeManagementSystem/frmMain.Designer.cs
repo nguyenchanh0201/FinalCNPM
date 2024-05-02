@@ -53,6 +53,8 @@
             this.bClose = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label4 = new System.Windows.Forms.Label();
+            this.roleLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -239,7 +241,7 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(42, 54);
+            this.label2.Location = new System.Drawing.Point(239, 46);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(118, 39);
             this.label2.TabIndex = 12;
@@ -248,9 +250,9 @@
             // bChange
             // 
             this.bChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bChange.Location = new System.Drawing.Point(406, 35);
+            this.bChange.Location = new System.Drawing.Point(45, 117);
             this.bChange.Name = "bChange";
-            this.bChange.Size = new System.Drawing.Size(200, 83);
+            this.bChange.Size = new System.Drawing.Size(133, 61);
             this.bChange.TabIndex = 14;
             this.bChange.Text = "Change Password";
             this.bChange.UseVisualStyleBackColor = true;
@@ -259,15 +261,18 @@
             // lbUser
             // 
             this.lbUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbUser.Location = new System.Drawing.Point(42, 79);
+            this.lbUser.Location = new System.Drawing.Point(353, 46);
             this.lbUser.Name = "lbUser";
-            this.lbUser.Size = new System.Drawing.Size(118, 39);
+            this.lbUser.Size = new System.Drawing.Size(161, 39);
             this.lbUser.TabIndex = 15;
             this.lbUser.Text = "user";
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.roleLabel);
+            this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.lbUser);
             this.panel2.Controls.Add(this.bChange);
@@ -281,13 +286,12 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.label3);
-            this.panel4.Controls.Add(this.bMini);
             this.panel4.Controls.Add(this.bClose);
+            this.panel4.Controls.Add(this.bMini);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(606, 0);
+            this.panel4.Location = new System.Drawing.Point(1067, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(544, 194);
+            this.panel4.Size = new System.Drawing.Size(83, 194);
             this.panel4.TabIndex = 18;
             // 
             // label3
@@ -296,7 +300,7 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Image = global::CafeManagementSystem.Properties.Resources.icons8_clock_1001;
             this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label3.Location = new System.Drawing.Point(3, 12);
+            this.label3.Location = new System.Drawing.Point(766, 12);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(295, 131);
             this.label3.TabIndex = 19;
@@ -308,9 +312,9 @@
             this.bMini.BackColor = System.Drawing.SystemColors.Highlight;
             this.bMini.BackgroundImage = global::CafeManagementSystem.Properties.Resources.minimize;
             this.bMini.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.bMini.Location = new System.Drawing.Point(374, 0);
+            this.bMini.Location = new System.Drawing.Point(3, 0);
             this.bMini.Name = "bMini";
-            this.bMini.Size = new System.Drawing.Size(89, 67);
+            this.bMini.Size = new System.Drawing.Size(43, 36);
             this.bMini.TabIndex = 16;
             this.bMini.UseVisualStyleBackColor = false;
             this.bMini.Click += new System.EventHandler(this.bMini_Click);
@@ -320,9 +324,9 @@
             this.bClose.BackColor = System.Drawing.Color.Red;
             this.bClose.BackgroundImage = global::CafeManagementSystem.Properties.Resources.close;
             this.bClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.bClose.Location = new System.Drawing.Point(459, 0);
+            this.bClose.Location = new System.Drawing.Point(42, 0);
             this.bClose.Name = "bClose";
-            this.bClose.Size = new System.Drawing.Size(87, 67);
+            this.bClose.Size = new System.Drawing.Size(41, 36);
             this.bClose.TabIndex = 17;
             this.bClose.UseVisualStyleBackColor = false;
             this.bClose.Click += new System.EventHandler(this.bClose_Click);
@@ -331,15 +335,33 @@
             // 
             this.pictureBox2.BackgroundImage = global::CafeManagementSystem.Properties.Resources.Sample_User_Icon;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Location = new System.Drawing.Point(183, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(34, 12);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(199, 131);
+            this.pictureBox2.Size = new System.Drawing.Size(167, 93);
             this.pictureBox2.TabIndex = 13;
             this.pictureBox2.TabStop = false;
             // 
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(239, 104);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(78, 39);
+            this.label4.TabIndex = 19;
+            this.label4.Text = "Role : ";
+            // 
+            // roleLabel
+            // 
+            this.roleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roleLabel.Location = new System.Drawing.Point(323, 104);
+            this.roleLabel.Name = "roleLabel";
+            this.roleLabel.Size = new System.Drawing.Size(233, 39);
+            this.roleLabel.TabIndex = 20;
+            this.roleLabel.Text = "role";
             // 
             // frmMain
             // 
@@ -390,5 +412,7 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label roleLabel;
+        private System.Windows.Forms.Label label4;
     }
 }

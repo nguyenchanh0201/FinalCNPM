@@ -7,11 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BLL; 
 
 namespace CafeManagementSystem
 {
     public partial class frmLogin : Form
     {
+        public static string username;
+        public static string role; 
+        string password;
+
         public frmLogin()
         {
             InitializeComponent();
@@ -19,11 +24,13 @@ namespace CafeManagementSystem
 
         }
 
+
+
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string username = txtUsername.Text;
-            string password = txtPassword.Text;
-
+             username = txtUsername.Text;
+             password = txtPassword.Text;
+             
             // Check if either username or password fields are empty
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
             {
@@ -32,12 +39,16 @@ namespace CafeManagementSystem
             }
 
             // Check if the username and password are correct
-            if (username == "admin" && password == "password")
+            BLLUsers users = new BLLUsers(username, password, "");
+            role = users.getRole(username);
+
+            if (users.login(username, password))
             {
                 // Login successful, show the main form
                 frmMain f = new frmMain();
                 this.Hide();
                 f.ShowDialog();
+
             }
             else
             {
