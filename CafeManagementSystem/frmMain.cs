@@ -34,7 +34,7 @@ namespace CafeManagementSystem
 
         private void bShift_Click(object sender, EventArgs e)
         {
-
+            AddControls(new frmShift());    
         }
 
         private void bSale_Click(object sender, EventArgs e)

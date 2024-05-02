@@ -12,7 +12,16 @@ namespace DTO
         private string username;
         private string password;
         private string role;
-           
+
+        public Users(string username , string password, string role)
+        {
+            this.Equals(username);
+            this.Equals(password);
+            this.Equals(role);
+        }
+
+
+
 
 
     }

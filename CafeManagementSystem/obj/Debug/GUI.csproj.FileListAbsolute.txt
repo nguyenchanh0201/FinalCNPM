@@ -37,3 +37,17 @@ E:\Final_CNPM_522H0010\CafeManagementSystem\obj\Debug\GUI.csproj.GenerateResourc
 E:\Final_CNPM_522H0010\CafeManagementSystem\obj\Debug\GUI.csproj.CoreCompileInputs.cache
 E:\Final_CNPM_522H0010\CafeManagementSystem\obj\Debug\CafeManagementSystem.exe
 E:\Final_CNPM_522H0010\CafeManagementSystem\obj\Debug\CafeManagementSystem.pdb
+C:\Users\ASUS\source\repos\New2\CafeManagementSystem\bin\Debug\CafeManagementSystem.exe.config
+C:\Users\ASUS\source\repos\New2\CafeManagementSystem\bin\Debug\CafeManagementSystem.exe
+C:\Users\ASUS\source\repos\New2\CafeManagementSystem\bin\Debug\CafeManagementSystem.pdb
+C:\Users\ASUS\source\repos\New2\CafeManagementSystem\obj\Debug\GUI.csproj.AssemblyReference.cache
+C:\Users\ASUS\source\repos\New2\CafeManagementSystem\obj\Debug\CafeManagementSystem.frmHome.resources
+C:\Users\ASUS\source\repos\New2\CafeManagementSystem\obj\Debug\CafeManagementSystem.frmLogin.resources
+C:\Users\ASUS\source\repos\New2\CafeManagementSystem\obj\Debug\CafeManagementSystem.frmMain.resources
+C:\Users\ASUS\source\repos\New2\CafeManagementSystem\obj\Debug\CafeManagementSystem.frmSale.resources
+C:\Users\ASUS\source\repos\New2\CafeManagementSystem\obj\Debug\CafeManagementSystem.Properties.Resources.resources
+C:\Users\ASUS\source\repos\New2\CafeManagementSystem\obj\Debug\GUI.csproj.GenerateResource.cache
+C:\Users\ASUS\source\repos\New2\CafeManagementSystem\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\source\repos\New2\CafeManagementSystem\obj\Debug\CafeManagementSystem.exe
+C:\Users\ASUS\source\repos\New2\CafeManagementSystem\obj\Debug\CafeManagementSystem.pdb
+C:\Users\ASUS\source\repos\New2\CafeManagementSystem\obj\Debug\CafeManagementSystem.frmShift.resources
