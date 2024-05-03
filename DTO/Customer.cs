@@ -8,10 +8,44 @@ namespace DTO
 {
     public class Customer
     {
-        public int CustomerID { get; set; }
-        public string CustomerName { get; set; }
-        public string PhoneNumber { get; set; }
-        public int Points { get; set; }
-        public string MembershipLevel { get; set; }
+        private int customerID;
+        private string customerName;
+        private string phoneNumber;
+        private int points;
+        private string membershipLevel;
+
+        public Customer(int customerID, string customerName, string phoneNumber, int points, string membershipLevel)
+        {
+            this.customerID = customerID;
+            this.customerName = customerName;
+            this.phoneNumber = phoneNumber;
+            this.points = points;
+            this.membershipLevel = membershipLevel;
+        }
+
+        public int getCustomerID()
+        {
+            return customerID;
+        }
+
+        public string getCustomerName()
+        {
+            return customerName;
+        }
+
+        public string getPhoneNumber()
+        {
+            return phoneNumber;
+        }
+
+        public int getPoints()
+        {
+            return points;
+        }
+
+        public string getMembershipLevel()
+        {
+            return membershipLevel;
+        }
     }
 }

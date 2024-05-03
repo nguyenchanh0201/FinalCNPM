@@ -8,8 +8,31 @@ namespace DTO
 {
     public class Discount
     {
-        public int DiscountID { get; set; }
-        public string DiscountCode { get; set; }
-        public float Percentage { get; set; }
+
+        private int discountID;
+        private string discountCode;
+        private float percentage;
+
+        public Discount(int discountID, string discountCode, float percentage)
+        {
+            this.discountID = discountID;
+            this.discountCode = discountCode;
+            this.percentage = percentage;
+        }
+
+        public int getDiscountID()
+        {
+            return discountID;
+        }
+
+        public string getDiscountCode()
+        {
+            return discountCode;
+        }
+
+        public float getPercentage()
+        {
+            return percentage;
+        }
     }
 }

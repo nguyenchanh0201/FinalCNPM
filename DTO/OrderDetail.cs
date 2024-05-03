@@ -8,10 +8,45 @@ namespace DTO
 {
     public class OrderDetail
     {
-        public int OrderDetailID { get; set; }
-        public int OrderID { get; set; }
-        public int ProductID { get; set; }
-        public int Quantity { get; set; }
-        public float Price { get; set; }
+
+        private int orderDetailID;
+        private int orderID;
+        private int productID;
+        private int quantity;
+        private float price;
+
+        public OrderDetail(int orderDetailID, int orderID, int productID, int quantity, float price)
+        {
+            this.orderDetailID = orderDetailID;
+            this.orderID = orderID;
+            this.productID = productID;
+            this.quantity = quantity;
+            this.price = price;
+        }
+
+        public int getOrderDetailID()
+        {
+            return orderDetailID;
+        }
+
+        public int getOrderID()
+        {
+            return orderID;
+        }
+
+        public int getProductID()
+        {
+            return productID;
+        }
+
+        public int getQuantity()
+        {
+            return quantity;
+        }
+
+        public float getPrice()
+        {
+            return price;
+        }
     }
 }

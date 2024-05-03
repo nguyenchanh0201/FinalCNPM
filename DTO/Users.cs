@@ -15,9 +15,9 @@ namespace DTO
 
         public Users(string username , string password, string role)
         {
-            this.Equals(username);
-            this.Equals(password);
-            this.Equals(role);
+            this.username = username;
+            this.password = password;
+            this.role = role;
         }
         public String getUsername()
         {
