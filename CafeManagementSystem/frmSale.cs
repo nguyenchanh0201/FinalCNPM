@@ -16,5 +16,13 @@ namespace CafeManagementSystem
         {
             InitializeComponent();
         }
+        
+
+        private void bPlaceOrder_Click(object sender, EventArgs e)
+        {
+            frmPlaceOrder frm = new frmPlaceOrder();
+            frm.ShowDialog();
+
+        }
     }
 }

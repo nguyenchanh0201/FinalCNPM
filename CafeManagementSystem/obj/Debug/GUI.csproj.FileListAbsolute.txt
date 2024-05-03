@@ -72,3 +72,5 @@ C:\Users\ASUS\Source\Repos\FinalCNPM\CafeManagementSystem\bin\Debug\BLL.pdb
 C:\Users\ASUS\Source\Repos\FinalCNPM\CafeManagementSystem\bin\Debug\DAL.pdb
 C:\Users\ASUS\Source\Repos\FinalCNPM\CafeManagementSystem\bin\Debug\DTO.pdb
 C:\Users\ASUS\Source\Repos\FinalCNPM\CafeManagementSystem\obj\Debug\GUI.csproj.CopyComplete
+C:\Users\ASUS\source\repos\FinalCNPM\CafeManagementSystem\obj\Debug\CafeManagementSystem.frmPlaceOrder.resources
+C:\Users\ASUS\source\repos\FinalCNPM\CafeManagementSystem\obj\Debug\CafeManagementSystem.frmPayment.resources
