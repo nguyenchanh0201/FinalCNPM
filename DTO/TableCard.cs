@@ -10,17 +10,17 @@ namespace DTO
     public class TableCard
     {
 
-        private int tableCardID;
+        private string tableCardID;
         private string tableName;
         private string status;
 
-        public TableCard(int tableCardID, string tableName, string status)
+        public TableCard(string tableCardID, string tableName, string status)
         {
             this.tableCardID = tableCardID; 
             this.tableName = tableName;
             this.status = status;
         }
-        public int getTableCardID()
+        public string getTableCardID()
         {
             return tableCardID;
         }
@@ -33,6 +33,14 @@ namespace DTO
         public String getStatus()
         {
             return status;
+        }
+
+        public TableCard(DataRow dr)
+        {
+            this.tableCardID = dr["ID"].ToString();
+            this.tableName = dr["TableName"].ToString();
+            this.status = dr["Status"].ToString();
+
         }
 
     }

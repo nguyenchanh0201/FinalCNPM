@@ -31,6 +31,10 @@ namespace BLL
             return dalusers.getRole(username);
         }
 
+        public void updatePassword(String username, String password)
+        {
+            dalusers.updatePassword(username, password);
+        }
 
     }
 }

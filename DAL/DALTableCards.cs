@@ -3,31 +3,46 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DTO;
+using System.Data;
 
 namespace DAL
 {
     public class DALTableCards
     {
-        public static List<DTO.TableCard> getTableCards()
+
+        TableCard tc;
+        public DALTableCards(String tableID, string tableName, string status)
         {
-            List<DTO.TableCard> tableCards = new List<DTO.TableCard>();
-            string sql = "select * from TableCards";
-            System.Data.DataTable dt = Connection.selectQuery(sql);
-            foreach (System.Data.DataRow dr in dt.Rows)
-            {
-                int tableCardID = int.Parse(dr["TableCardID"].ToString());
-                string tableName = dr["TableName"].ToString();
-                string status = dr["Status"].ToString();
-                DTO.TableCard tc = new DTO.TableCard(tableCardID, tableName, status);
-                tableCards.Add(tc);
-            }
-            return tableCards;
+            tc = new TableCard(tableID, tableName, status);
         }
-        
-        public void insertTableCard(DTO.TableCard tc)
+
+        public List<TableCard> getTableCards()
         {
-            string sql = "insert into TableCards values('" + tc.getTableName() + "','" + tc.getStatus() + "')";
+            List<TableCard> list = new List<TableCard>();
+            string sql = "SELECT * FROM TableCards ORDER BY CAST(RIGHT(ID, LEN(ID) - 1) AS INT);";
+            DataTable dt = Connection.selectQuery(sql);
+            foreach (DataRow dr in dt.Rows)
+            {
+                list.Add(new TableCard(dr));
+            }
+            return list;
+
+        }
+
+        public void insertTableCard(TableCard tc)
+        {
+            string sql = "insert into tablecards values ('" + tc.getTableCardID() + "','" + tc.getTableName() + "','" + tc.getStatus() + "')";
             Connection.actionQuery(sql);
         }
+
+        public void updateTableCard(TableCard tc)
+        {
+            string sql = "update tablecards set TableName = '" + tc.getTableName() + "', Status = '" + tc.getStatus() + "' where TableCardID = '" + tc.getTableCardID() + "'";
+            Connection.actionQuery(sql);
+        }
+
+        
+
     }
 }

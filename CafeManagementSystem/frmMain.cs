@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BLL;
 
 namespace CafeManagementSystem
 {
@@ -82,6 +81,8 @@ namespace CafeManagementSystem
 
         private void bChange_Click(object sender, EventArgs e)
         {
+            frmChangePwd frm = new frmChangePwd();
+            frm.Show();
 
         }
 

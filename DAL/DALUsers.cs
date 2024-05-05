@@ -34,6 +34,11 @@ namespace DAL
 
 
         }
+        public void updatePassword(String username, String password)
+        {
+            string sql = "update users set password = '" + password + "' where username = '" + username + "'";
+            Connection.actionQuery(sql);
+        }
 
         public String getRole(String username)
         {

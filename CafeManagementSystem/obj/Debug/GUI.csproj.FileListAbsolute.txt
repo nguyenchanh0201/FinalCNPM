@@ -74,3 +74,6 @@ C:\Users\ASUS\Source\Repos\FinalCNPM\CafeManagementSystem\bin\Debug\DTO.pdb
 C:\Users\ASUS\Source\Repos\FinalCNPM\CafeManagementSystem\obj\Debug\GUI.csproj.CopyComplete
 C:\Users\ASUS\source\repos\FinalCNPM\CafeManagementSystem\obj\Debug\CafeManagementSystem.frmPlaceOrder.resources
 C:\Users\ASUS\source\repos\FinalCNPM\CafeManagementSystem\obj\Debug\CafeManagementSystem.frmPayment.resources
+C:\Users\ASUS\source\repos\FinalCNPM\CafeManagementSystem\obj\Debug\CafeManagementSystem.frmMomo.resources
+C:\Users\ASUS\source\repos\FinalCNPM\CafeManagementSystem\obj\Debug\CafeManagementSystem.frmCash.resources
+C:\Users\ASUS\source\repos\FinalCNPM\CafeManagementSystem\obj\Debug\CafeManagementSystem.frmChangePwd.resources
