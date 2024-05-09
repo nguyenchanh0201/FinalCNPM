@@ -47,6 +47,7 @@
     <Compile Include="OrderDetail.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="ProductCategory.cs" />
+    <Compile Include="Shift.cs" />
     <Compile Include="StatisticalData.cs" />
     <Compile Include="TableCard.cs" />
     <Compile Include="Users.cs" />

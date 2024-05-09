@@ -74,11 +74,6 @@ namespace CafeManagementSystem
 
         }
 
-        private void button10_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void bChange_Click(object sender, EventArgs e)
         {
             frmChangePwd frm = new frmChangePwd();
@@ -109,6 +104,15 @@ namespace CafeManagementSystem
         private void timer1_Tick(object sender, EventArgs e)
         {
             label3.Text = DateTime.Now.ToString("hh:mm:ss");
+        }
+
+        private void bLogout_Click(object sender, EventArgs e)
+        {
+            //Log the user out 
+            frmLogin frm = new frmLogin();
+            frm.Show();
+            this.Hide();
+
         }
     }
 }

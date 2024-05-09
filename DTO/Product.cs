@@ -9,13 +9,13 @@ namespace DTO
     public class Product
     {
 
-        private int productID;
+        private string productID;
         private string productName;
-        private int categoryID;
-        private float price;
+        private string categoryID;
+        private decimal price;
         private string status;
 
-        public Product(int productID, string productName, int categoryID, float price, string status)
+        public Product(string productID, string productName, string categoryID, decimal price, string status)
         {
             this.productID = productID;
             this.productName = productName;
@@ -24,7 +24,7 @@ namespace DTO
             this.status = status;
         }
 
-        public int getProductID()
+        public string getProductID()
         {
             return productID;
         }
@@ -34,19 +34,36 @@ namespace DTO
             return productName;
         }
 
-        public int getCategoryID()
+        public string getCategoryID()
         {
             return categoryID;
         }
 
-        public float getPrice()
+        public decimal getPrice()
         {
             return price;
         }
 
         public string getStatus()
         {
+            if (status == "1")
+            {
+                status = "Active";
+            }
+            else
+            {
+                status = "Inactive";
+            }
             return status;
+        }
+
+        public Product(System.Data.DataRow dr)
+        {
+            this.productID = dr["PID"].ToString();
+            this.productName = dr["PName"].ToString();
+            this.categoryID = dr["CateID"].ToString();
+            this.price = decimal.Parse(dr["Price"].ToString());
+            this.status = dr["Status"].ToString();
         }
     }
 }

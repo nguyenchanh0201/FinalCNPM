@@ -10,15 +10,15 @@ namespace DTO
     public class ProductCategory
     {
 
-        private int categoryID;
+        private string categoryID;
         private string categoryName;
-        public ProductCategory(int categoryID, string categoryName)
+        public ProductCategory(string categoryID, string categoryName)
         {
             this.categoryID = categoryID;
             this.categoryName = categoryName;
         }
 
-        public int getCategoryID()
+        public string getCategoryID()
         {
             return categoryID;
         }
@@ -26,6 +26,12 @@ namespace DTO
         public string getCategoryName()
         {
             return categoryName;
+        }
+
+        public ProductCategory(DataRow dr)
+        {
+            this.categoryID = dr["CateID"].ToString()  ;
+            this.categoryName = dr["CateName"].ToString();
         }
     }
 }

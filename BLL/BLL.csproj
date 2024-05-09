@@ -41,6 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLLCategories.cs" />
+    <Compile Include="BLLProducts.cs" />
+    <Compile Include="BLLShift.cs" />
     <Compile Include="BLLTableCards.cs" />
     <Compile Include="BLLUsers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

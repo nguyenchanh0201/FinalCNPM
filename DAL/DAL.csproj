@@ -42,6 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Connection.cs" />
+    <Compile Include="DALCategory.cs" />
+    <Compile Include="DALProducts.cs" />
+    <Compile Include="DALShift.cs" />
     <Compile Include="DALTableCards.cs" />
     <Compile Include="DALUsers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

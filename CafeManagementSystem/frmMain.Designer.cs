@@ -32,7 +32,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button10 = new System.Windows.Forms.Button();
+            this.bLogout = new System.Windows.Forms.Button();
             this.bLoyalty = new System.Windows.Forms.Button();
             this.bPromotion = new System.Windows.Forms.Button();
             this.bEmployee = new System.Windows.Forms.Button();
@@ -67,7 +67,7 @@
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.button10);
+            this.panel1.Controls.Add(this.bLogout);
             this.panel1.Controls.Add(this.bLoyalty);
             this.panel1.Controls.Add(this.bPromotion);
             this.panel1.Controls.Add(this.bEmployee);
@@ -101,15 +101,15 @@
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
             // 
-            // button10
+            // bLogout
             // 
-            this.button10.Image = global::CafeManagementSystem.Properties.Resources.icons8_log_out_24;
-            this.button10.Location = new System.Drawing.Point(63, 934);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(156, 73);
-            this.button10.TabIndex = 9;
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
+            this.bLogout.Image = global::CafeManagementSystem.Properties.Resources.icons8_log_out_24;
+            this.bLogout.Location = new System.Drawing.Point(63, 934);
+            this.bLogout.Name = "bLogout";
+            this.bLogout.Size = new System.Drawing.Size(156, 73);
+            this.bLogout.TabIndex = 9;
+            this.bLogout.UseVisualStyleBackColor = true;
+            this.bLogout.Click += new System.EventHandler(this.bLogout_Click);
             // 
             // bLoyalty
             // 
@@ -398,7 +398,7 @@
         private System.Windows.Forms.Button bEmployee;
         private System.Windows.Forms.Button bTrack;
         private System.Windows.Forms.Button bLoyalty;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button bLogout;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel CenterPanel;

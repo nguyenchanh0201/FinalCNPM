@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.grd = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.bHome = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -42,20 +42,22 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.bClose = new System.Windows.Forms.Button();
+            this.date = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.grd)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // grd
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(13, 44);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1706, 424);
-            this.dataGridView1.TabIndex = 0;
+            this.grd.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.grd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grd.Location = new System.Drawing.Point(13, 44);
+            this.grd.Name = "grd";
+            this.grd.Size = new System.Drawing.Size(1706, 424);
+            this.grd.TabIndex = 0;
             // 
             // label2
             // 
@@ -77,9 +79,12 @@
             this.bHome.TabIndex = 19;
             this.bHome.Text = "Open Shift";
             this.bHome.UseVisualStyleBackColor = true;
+            this.bHome.Click += new System.EventHandler(this.bHome_Click);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.date);
+            this.groupBox1.Controls.Add(this.bClose);
             this.groupBox1.Controls.Add(this.txtClosetime);
             this.groupBox1.Controls.Add(this.txtOpentime);
             this.groupBox1.Controls.Add(this.txtEmployee);
@@ -103,9 +108,9 @@
             this.txtClosetime.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtClosetime.Location = new System.Drawing.Point(1338, 164);
             this.txtClosetime.Name = "txtClosetime";
-            this.txtClosetime.Size = new System.Drawing.Size(67, 24);
+            this.txtClosetime.Size = new System.Drawing.Size(53, 24);
             this.txtClosetime.TabIndex = 27;
-            this.txtClosetime.Text = "Shift ID";
+            this.txtClosetime.Text = "Time";
             // 
             // txtOpentime
             // 
@@ -113,9 +118,9 @@
             this.txtOpentime.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtOpentime.Location = new System.Drawing.Point(1338, 117);
             this.txtOpentime.Name = "txtOpentime";
-            this.txtOpentime.Size = new System.Drawing.Size(67, 24);
+            this.txtOpentime.Size = new System.Drawing.Size(53, 24);
             this.txtOpentime.TabIndex = 26;
-            this.txtOpentime.Text = "Shift ID";
+            this.txtOpentime.Text = "Time";
             // 
             // txtEmployee
             // 
@@ -123,9 +128,9 @@
             this.txtEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmployee.Location = new System.Drawing.Point(1338, 78);
             this.txtEmployee.Name = "txtEmployee";
-            this.txtEmployee.Size = new System.Drawing.Size(67, 24);
+            this.txtEmployee.Size = new System.Drawing.Size(61, 24);
             this.txtEmployee.TabIndex = 25;
-            this.txtEmployee.Text = "Shift ID";
+            this.txtEmployee.Text = "Name";
             // 
             // txtShiftID
             // 
@@ -179,7 +184,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.dataGridView1);
+            this.groupBox2.Controls.Add(this.grd);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(0, 369);
             this.groupBox2.Name = "groupBox2";
@@ -198,6 +203,29 @@
             this.panel2.Size = new System.Drawing.Size(1525, 149);
             this.panel2.TabIndex = 24;
             // 
+            // bClose
+            // 
+            this.bClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.bClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bClose.Location = new System.Drawing.Point(205, 205);
+            this.bClose.Name = "bClose";
+            this.bClose.Size = new System.Drawing.Size(161, 41);
+            this.bClose.TabIndex = 28;
+            this.bClose.Text = "Close Shift";
+            this.bClose.UseVisualStyleBackColor = true;
+            this.bClose.Click += new System.EventHandler(this.bClose_Click);
+            // 
+            // date
+            // 
+            this.date.AutoSize = true;
+            this.date.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.date.Location = new System.Drawing.Point(1338, 214);
+            this.date.Name = "date";
+            this.date.Size = new System.Drawing.Size(48, 24);
+            this.date.TabIndex = 29;
+            this.date.Text = "Date";
+            // 
             // frmShift
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -209,7 +237,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmShift";
             this.Text = "frmShift";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grd)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -220,7 +248,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView grd;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button bHome;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -234,5 +262,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button bClose;
+        private System.Windows.Forms.Label date;
     }
 }

@@ -24,5 +24,15 @@ namespace CafeManagementSystem
             frm.ShowDialog();
 
         }
+
+        private void bCustomer_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bTable_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -18,6 +18,8 @@ namespace CafeManagementSystem
         public frmPlaceOrder()
         {
             InitializeComponent();
+            flowLayoutPanel1.Enabled = false; 
+
         }
 
         private void bpayment_Click(object sender, EventArgs e)
@@ -46,15 +48,13 @@ namespace CafeManagementSystem
                 btn.Width = 153;
                 btn.Height = 107;
 
-                // Load the image from a file if available
-                // btn.Image = Image.FromFile("path_to_your_image.png");
-
-                // Or assign the image directly if it's available as a resource
-                btn.Image = Properties.Resources.icons8_table_501; // Assuming the image is named icons8_table_501
+                
+                btn.Image = Properties.Resources.icons8_table_501; 
 
                 btn.ImageAlign = ContentAlignment.TopCenter;
                 btn.TextAlign = ContentAlignment.BottomCenter;
-
+                //Create event handler for each button
+                btn.Click += new EventHandler((sender, e) => btnTable_Click(sender, e, tc.getTableName()));
                 flowLayoutPanel1.Controls.Add(btn);
             }
 
@@ -63,6 +63,104 @@ namespace CafeManagementSystem
         private void frmPlaceOrder_Load(object sender, EventArgs e)
         {
             loadTable();
+            LoadCategory();
+            flowLayoutPanel3.Enabled = false;
+            flowLayoutPanel4.Enabled = false;
+            LoadProduct();
+
+
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+            lbOrder.Text = "Take Away";
+            flowLayoutPanel1.Enabled = true;
+        }
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+            lbOrder.Text = "Dine-in";
+            flowLayoutPanel1.Enabled = true;
+        }
+
+        private void button21_Click(object sender, EventArgs e)
+        {
+            lbOrder.Text = "Shipping";
+            flowLayoutPanel1.Enabled = true;
+        }
+
+        private void btnTable_Click(object sender, EventArgs e, string tableName)
+        {
+            lbTable.Text = tableName;
+            flowLayoutPanel3.Enabled = true;
+            flowLayoutPanel4.Enabled = true;
+        }
+
+        void LoadCategory()
+        {
+            
+            List<ProductCategory> categories = BLLCategories.getCategory();
+            foreach (ProductCategory c in categories)
+            {
+                Button btn = new Button();
+                btn.Text = c.getCategoryName();
+                btn.Name = c.getCategoryID();
+                btn.Width = 159;
+                btn.Height = 156;
+                btn.Click += new EventHandler((sender, e) => btnCategory_Click(sender, e));
+                flowLayoutPanel3.Controls.Add(btn);
+            }
+
+        }
+
+        void LoadProduct()
+        {
+            List<Product> products = BLLProducts.GetProducts();
+            foreach (Product p in products)
+            {
+                Button btn = new Button();
+                btn.Text = p.getProductName();
+                btn.Name = p.getProductID();
+                btn.Width = 159;
+                btn.Height = 156;
+                btn.Click += new EventHandler((sender, e) => btnProduct_Click(sender, e, p.getProductName()));
+                flowLayoutPanel4.Controls.Add(btn);
+            }
+        }
+
+        void LoadProductByCategory(string categoryname)
+        {
+            List<Product> products = BLLProducts.GetProductsByCategory(categoryname);
+            foreach (Product p in products)
+            {
+                Button btn = new Button();
+                btn.Text = p.getProductName();
+                btn.Name = p.getProductID();
+                btn.Width = 159;
+                btn.Height = 156;
+                btn.Click += new EventHandler((sender, e) => btnProduct_Click(sender, e, p.getProductName()));
+                flowLayoutPanel4.Controls.Add(btn);
+            }
+        }
+
+        private void btnProduct_Click(object sender, EventArgs e , string productName)
+        {
+
+        }
+
+        
+
+        private void btnCategory_Click(object sender, EventArgs e)
+        {
+
+            flowLayoutPanel4.Controls.Clear();
+            //get the name of the button 
+            string categoryname = ((Button)sender).Text;
+
+
+
+            LoadProductByCategory(categoryname);
+
         }
     }
 }
