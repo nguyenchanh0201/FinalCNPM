@@ -44,6 +44,7 @@
     <Compile Include="Connection.cs" />
     <Compile Include="DALCategory.cs" />
     <Compile Include="DALProducts.cs" />
+    <Compile Include="DALRole.cs" />
     <Compile Include="DALShift.cs" />
     <Compile Include="DALTableCards.cs" />
     <Compile Include="DALUsers.cs" />

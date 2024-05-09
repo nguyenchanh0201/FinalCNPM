@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="BLLCategories.cs" />
     <Compile Include="BLLProducts.cs" />
+    <Compile Include="BLLRole.cs" />
     <Compile Include="BLLShift.cs" />
     <Compile Include="BLLTableCards.cs" />
     <Compile Include="BLLUsers.cs" />

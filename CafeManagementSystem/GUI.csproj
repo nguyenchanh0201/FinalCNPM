@@ -46,6 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAccount.Designer.cs">
+      <DependentUpon>frmAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddAccount.Designer.cs">
+      <DependentUpon>frmAddAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddRole.Designer.cs">
+      <DependentUpon>frmAddRole.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,6 +75,12 @@
     </Compile>
     <Compile Include="frmChangePwd.Designer.cs">
       <DependentUpon>frmChangePwd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmployee.Designer.cs">
+      <DependentUpon>frmEmployee.cs</DependentUpon>
     </Compile>
     <Compile Include="frmHome.cs">
       <SubType>Form</SubType>
@@ -94,6 +118,12 @@
     <Compile Include="frmPlaceOrder.Designer.cs">
       <DependentUpon>frmPlaceOrder.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRole.Designer.cs">
+      <DependentUpon>frmRole.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSale.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,11 +138,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAccount.resx">
+      <DependentUpon>frmAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddAccount.resx">
+      <DependentUpon>frmAddAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddRole.resx">
+      <DependentUpon>frmAddRole.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCash.resx">
       <DependentUpon>frmCash.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmChangePwd.resx">
       <DependentUpon>frmChangePwd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmployee.resx">
+      <DependentUpon>frmEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmHome.resx">
       <DependentUpon>frmHome.cs</DependentUpon>
@@ -131,6 +173,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPlaceOrder.resx">
       <DependentUpon>frmPlaceOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRole.resx">
+      <DependentUpon>frmRole.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSale.resx">
       <DependentUpon>frmSale.cs</DependentUpon>

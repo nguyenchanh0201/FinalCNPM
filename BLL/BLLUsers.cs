@@ -5,21 +5,24 @@ using System.Text;
 using System.Threading.Tasks;
 using DAL; 
 using System.Data;
+using DTO;
 namespace BLL
+
 {
     public class BLLUsers
     {
-        DALUsers dalusers;
+        static DALUsers dalusers;
 
-        public BLLUsers(String username, String password, String role)
+        public BLLUsers(String username, String password, String role,String name,String phone)
         {
-            dalusers = new DALUsers(username, password, role);
+            dalusers = new DALUsers(username, password, role,name,phone);
         }
 
-        public void insert()
+        public void insert(String username, String password, String role, String name, String phone)
         {
-            dalusers.insert();
+            dalusers.insert(username, password, role, name, phone);
         }
+
 
         public bool login(String username, String password)
         {
@@ -35,6 +38,11 @@ namespace BLL
         {
             dalusers.updatePassword(username, password);
         }
+        public static List<Users> getUsers()
+        {
+            return dalusers.getUsers();
+        }
+
 
     }
 }

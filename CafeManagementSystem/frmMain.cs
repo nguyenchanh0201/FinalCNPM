@@ -61,7 +61,7 @@ namespace CafeManagementSystem
 
         private void bEmployee_Click(object sender, EventArgs e)
         {
-
+            AddControls(new frmEmployee());
         }
 
         private void bPromotion_Click(object sender, EventArgs e)

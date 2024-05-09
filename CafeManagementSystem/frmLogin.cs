@@ -39,7 +39,7 @@ namespace CafeManagementSystem
             }
 
             // Check if the username and password are correct
-            BLLUsers users = new BLLUsers(username, password, "");
+            BLLUsers users = new BLLUsers(username, password, "", "", "");
             role = users.getRole(username);
 
             if (users.login(username, password))

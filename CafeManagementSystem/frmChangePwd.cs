@@ -35,7 +35,7 @@ namespace CafeManagementSystem
             {
                 //Change password
                 string username = frmLogin.username; // Assuming frmLogin is a form where username is stored
-                BLLUsers bllusers = new BLLUsers(username, newPassword, ""); // Assuming the third parameter is some other information like email
+                BLLUsers bllusers = new BLLUsers(username, newPassword, "", "", ""); // Assuming the third parameter is some other information like email
                 bllusers.updatePassword(username, newPassword);
 
                 //Update password in database

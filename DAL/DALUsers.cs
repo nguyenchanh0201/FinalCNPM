@@ -11,13 +11,13 @@ namespace DAL
     public class DALUsers
     {
         Users u; 
-        public DALUsers (String username, String password, String role)
+        public DALUsers (String username, String password, String role,String name, String phone)
         {
-            u = new Users(username, password, role);
+            u = new Users(username, password, role,name, phone);
         }
-        public void insert()
+        public void insert(String username, String password, String role, String name, String phone)
         {
-            string sql = "insert into users values ('" + u.getUsername() + "','" + u.getPassword() + "','" + u.getRole() + "')";
+            string sql = "insert into users values ('" + username + "','" + password + "','" + role + "','" + name + "','" + phone + "')";
             Connection.actionQuery(sql);
         }
 
@@ -48,6 +48,17 @@ namespace DAL
 
 
         }
-
+        public List<Users> getUsers()
+        {
+            List<Users> list = new List<Users>();
+            string sql = "select * from users";
+            DataTable dt = Connection.selectQuery(sql);
+            foreach (DataRow dr in dt.Rows)
+            {
+                Users u = new Users(dr);
+                list.Add(u);
+            }
+            return list;
+        }   
     }
 }
