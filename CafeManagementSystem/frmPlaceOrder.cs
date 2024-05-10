@@ -191,6 +191,9 @@ namespace CafeManagementSystem
         {
             //Create membership ( Search for customer phoneNum, then if exist add to the order, else create new one and add, else let customerID is 0 
 
+            frmMembership frmMembership = new frmMembership();
+            frmMembership.ShowDialog();
+
         }
     }
 }
