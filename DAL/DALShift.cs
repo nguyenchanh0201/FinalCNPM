@@ -10,12 +10,16 @@ namespace DAL
     {
          Shift s; 
 
-        public DALShift(String shiftID, DateTime shiftStart, DateTime shiftEnd)
+        public DALShift(String shiftID, DateTime shiftStart, DateTime shiftEnd, string username)
         {
-            s = new Shift(shiftID, shiftStart, shiftEnd);
+            s = new Shift(shiftID, shiftStart, shiftEnd, username);
         }
 
-        
+        public string getShiftID()
+        {
+            return s.getShiftID();
+        }
+
 
         //Create a method to create shift ID 
         public string createShiftID()
@@ -28,14 +32,20 @@ namespace DAL
         }
 
 
-        public  void addShift(DateTime shiftStart, DateTime shiftEnd)
+        public  void addShift(DateTime shiftStart, DateTime shiftEnd, string username)
         {
             //Add to shift table
             
             string shiftID = createShiftID();
 
-            string sql = "INSERT INTO Shift (shiftID, shiftStart, shiftEnd) VALUES ('" + shiftID + "', '" + shiftStart + "', '" + shiftEnd + "')";
+            string sql = "insert into Shift values ('" + shiftID + "','" + shiftStart + "','" + username + "','" + shiftEnd + "')";
             Connection.actionQuery(sql);
         }
+
+        public void updateShift(String shiftID, DateTime shiftEnd)
+        {             //Update shift table
+                      string sql = "update Shift set shiftEnd = '" + shiftEnd + "' where shiftID = '" + shiftID + "'";
+                                             Connection.actionQuery(sql);
+                                                   }
+        }
     }
-}

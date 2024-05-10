@@ -13,7 +13,7 @@ namespace DAL
         private static SqlConnection cn;
         public static void connect()
         {
-            string s = "initial catalog = coffe; data source = MSI\\MSSQLSERVER02; integrated security = true";
+            string s = "initial catalog = test; data source = LAPTOP-2RPKDMIN; integrated security = true";
             cn = new SqlConnection(s);
             cn.Open();
 

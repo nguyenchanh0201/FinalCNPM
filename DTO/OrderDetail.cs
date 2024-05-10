@@ -10,12 +10,12 @@ namespace DTO
     {
 
         private int orderDetailID;
-        private int orderID;
-        private int productID;
+        private string orderID;
+        private string productID;
         private int quantity;
-        private float price;
+        private decimal price;
 
-        public OrderDetail(int orderDetailID, int orderID, int productID, int quantity, float price)
+        public OrderDetail(int orderDetailID, string orderID, string productID, int quantity, decimal price)
         {
             this.orderDetailID = orderDetailID;
             this.orderID = orderID;
@@ -29,12 +29,12 @@ namespace DTO
             return orderDetailID;
         }
 
-        public int getOrderID()
+        public string getOrderID()
         {
             return orderID;
         }
 
-        public int getProductID()
+        public string getProductID()
         {
             return productID;
         }
@@ -44,7 +44,7 @@ namespace DTO
             return quantity;
         }
 
-        public float getPrice()
+        public decimal getPrice()
         {
             return price;
         }

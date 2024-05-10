@@ -29,6 +29,7 @@ namespace CafeManagementSystem
         {
 
         }
+
         public void showGRD()
         {
             listAccount.Items.Clear();
@@ -37,11 +38,25 @@ namespace CafeManagementSystem
             foreach (Users u in users)
             {
                 ListViewItem item = new ListViewItem(u.getUsername().ToString());
-                item.SubItems.Add(u.getRole());
+                //Get role name
+                string roleName = BLLUsers.getRole(u.getUsername().ToString());
+                
                 item.SubItems.Add(u.getName());
                 item.SubItems.Add(u.getPhone());
+                item.SubItems.Add(roleName);
                 listAccount.Items.Add(item);
             }
-        }   
+        }
+
+        private void btnAdd_Click_1(object sender, EventArgs e)
+        {
+            frmAddAccount frmAddAccount = new frmAddAccount();
+            frmAddAccount.ShowDialog();
+        }
+
+        private void bEdit_Click(object sender, EventArgs e)
+        {
+            frmEditAccount frmEditAccount = new frmEditAccount();
+        }
     }
 }

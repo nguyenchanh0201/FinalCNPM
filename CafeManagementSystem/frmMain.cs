@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace CafeManagementSystem
 {
     public partial class frmMain : Form
@@ -35,7 +36,25 @@ namespace CafeManagementSystem
 
         private void bShift_Click(object sender, EventArgs e)
         {
-            AddControls(new frmShift());    
+            bool frmShiftRunning = false;
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.GetType() == typeof(frmShift))
+                {
+                    // If frmShift is already running, set the flag and break the loop
+                    frmShiftRunning = true;
+                    MessageBox.Show("frmShift is already open!");
+                    break;
+                }
+            }
+
+            // If frmShift is not running, open a new instance
+            if (!frmShiftRunning)
+            {
+                frmShift frmshift = new frmShift();
+                frmshift.Show();
+            }
+           
         }
 
         private void bSale_Click(object sender, EventArgs e)
@@ -46,32 +65,63 @@ namespace CafeManagementSystem
 
         private void bOrder_Click(object sender, EventArgs e)
         {
+            //if user is cashier , request password
+            
+            
 
         }
 
         private void bMenu_Click(object sender, EventArgs e)
         {
+            if (roleLabel.Text == "cashier")
+            {
+                MessageBox.Show("You dont have permission to see this");
+            }
+            else
+            {
 
+            }
         }
 
         private void bTrack_Click(object sender, EventArgs e)
         {
+            if (roleLabel.Text == "cashier")
+            {
+                MessageBox.Show("You dont have permission to see this");
+            }
+            else
+            {
 
+            }
         }
 
         private void bEmployee_Click(object sender, EventArgs e)
         {
-            AddControls(new frmEmployee());
+            if (roleLabel.Text == "cashier")
+            {
+                MessageBox.Show("You dont have permission to see this");
+            }
+            else
+            {
+                AddControls(new frmEmployee());
+            }
+            
         }
 
         private void bPromotion_Click(object sender, EventArgs e)
         {
-
+            if (roleLabel.Text == "cashier")
+            {
+                MessageBox.Show("You dont have permission to see this");
+            }
         }
 
         private void bLoyalty_Click(object sender, EventArgs e)
         {
-
+            if (roleLabel.Text == "cashier")
+            {
+                MessageBox.Show("You dont have permission to see this");
+            }
         }
 
         private void bChange_Click(object sender, EventArgs e)

@@ -30,9 +30,6 @@
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.button19 = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
@@ -47,11 +44,18 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.button33 = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.lbOrder = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.lbTable = new System.Windows.Forms.Label();
+            this.lbOrder = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label = new System.Windows.Forms.Label();
+            this.lbOrderID = new System.Windows.Forms.Label();
+            this.bNewOrder = new System.Windows.Forms.Button();
+            this.button33 = new System.Windows.Forms.Button();
+            this.button19 = new System.Windows.Forms.Button();
+            this.button20 = new System.Windows.Forms.Button();
+            this.button21 = new System.Windows.Forms.Button();
             this.flowLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -74,36 +78,6 @@
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(477, 121);
             this.flowLayoutPanel2.TabIndex = 1;
-            // 
-            // button19
-            // 
-            this.button19.Image = global::CafeManagementSystem.Properties.Resources.icons8_take_away_60;
-            this.button19.Location = new System.Drawing.Point(3, 3);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(153, 107);
-            this.button19.TabIndex = 16;
-            this.button19.UseVisualStyleBackColor = true;
-            this.button19.Click += new System.EventHandler(this.button19_Click);
-            // 
-            // button20
-            // 
-            this.button20.Image = global::CafeManagementSystem.Properties.Resources.icons8_restaurant_table_60;
-            this.button20.Location = new System.Drawing.Point(162, 3);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(153, 107);
-            this.button20.TabIndex = 17;
-            this.button20.UseVisualStyleBackColor = true;
-            this.button20.Click += new System.EventHandler(this.button20_Click);
-            // 
-            // button21
-            // 
-            this.button21.Image = global::CafeManagementSystem.Properties.Resources.icons8_shipping_64;
-            this.button21.Location = new System.Drawing.Point(321, 3);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(153, 107);
-            this.button21.TabIndex = 18;
-            this.button21.UseVisualStyleBackColor = true;
-            this.button21.Click += new System.EventHandler(this.button21_Click);
             // 
             // label2
             // 
@@ -206,6 +180,7 @@
             this.button32.TabIndex = 19;
             this.button32.Text = "Create MemberShip";
             this.button32.UseVisualStyleBackColor = true;
+            this.button32.Click += new System.EventHandler(this.button32_Click);
             // 
             // label3
             // 
@@ -228,63 +203,135 @@
             // label7
             // 
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(14, 903);
+            this.label7.Location = new System.Drawing.Point(7, 893);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(154, 23);
             this.label7.TabIndex = 23;
             this.label7.Text = "Exit";
             // 
+            // label11
+            // 
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(507, 740);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(154, 23);
+            this.label11.TabIndex = 35;
+            this.label11.Text = "New";
+            // 
+            // lbTable
+            // 
+            this.lbTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTable.Location = new System.Drawing.Point(881, 836);
+            this.lbTable.Name = "lbTable";
+            this.lbTable.Size = new System.Drawing.Size(139, 26);
+            this.lbTable.TabIndex = 33;
+            this.lbTable.Text = "Blank";
+            // 
+            // lbOrder
+            // 
+            this.lbOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbOrder.Location = new System.Drawing.Point(881, 792);
+            this.lbOrder.Name = "lbOrder";
+            this.lbOrder.Size = new System.Drawing.Size(139, 26);
+            this.lbOrder.TabIndex = 32;
+            this.lbOrder.Text = "Blank";
+            // 
+            // label10
+            // 
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(710, 839);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(139, 26);
+            this.label10.TabIndex = 31;
+            this.label10.Text = "Table Card:";
+            // 
+            // label9
+            // 
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(710, 792);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(139, 26);
+            this.label9.TabIndex = 30;
+            this.label9.Text = "Order type:";
+            // 
+            // label
+            // 
+            this.label.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label.Location = new System.Drawing.Point(710, 749);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(139, 26);
+            this.label.TabIndex = 36;
+            this.label.Text = "Order ID:";
+            // 
+            // lbOrderID
+            // 
+            this.lbOrderID.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbOrderID.Location = new System.Drawing.Point(881, 749);
+            this.lbOrderID.Name = "lbOrderID";
+            this.lbOrderID.Size = new System.Drawing.Size(240, 26);
+            this.lbOrderID.TabIndex = 37;
+            this.lbOrderID.Text = "Order ID";
+            // 
+            // bNewOrder
+            // 
+            this.bNewOrder.BackgroundImage = global::CafeManagementSystem.Properties.Resources.add;
+            this.bNewOrder.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.bNewOrder.Location = new System.Drawing.Point(508, 766);
+            this.bNewOrder.Name = "bNewOrder";
+            this.bNewOrder.Size = new System.Drawing.Size(153, 107);
+            this.bNewOrder.TabIndex = 34;
+            this.bNewOrder.UseVisualStyleBackColor = true;
+            this.bNewOrder.Click += new System.EventHandler(this.button1_Click);
+            // 
             // button33
             // 
             this.button33.Image = global::CafeManagementSystem.Properties.Resources.icons8_power_off_button_100;
-            this.button33.Location = new System.Drawing.Point(12, 929);
+            this.button33.Location = new System.Drawing.Point(12, 919);
             this.button33.Name = "button33";
             this.button33.Size = new System.Drawing.Size(153, 107);
             this.button33.TabIndex = 20;
             this.button33.UseVisualStyleBackColor = true;
             this.button33.Click += new System.EventHandler(this.button33_Click);
             // 
-            // label9
+            // button19
             // 
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(517, 763);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(139, 26);
-            this.label9.TabIndex = 24;
-            this.label9.Text = "Order type:";
+            this.button19.Image = global::CafeManagementSystem.Properties.Resources.icons8_take_away_60;
+            this.button19.Location = new System.Drawing.Point(3, 3);
+            this.button19.Name = "button19";
+            this.button19.Size = new System.Drawing.Size(153, 107);
+            this.button19.TabIndex = 16;
+            this.button19.UseVisualStyleBackColor = true;
+            this.button19.Click += new System.EventHandler(this.button19_Click);
             // 
-            // label10
+            // button20
             // 
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(517, 814);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(139, 26);
-            this.label10.TabIndex = 25;
-            this.label10.Text = "Table Card:";
+            this.button20.Image = global::CafeManagementSystem.Properties.Resources.icons8_restaurant_table_60;
+            this.button20.Location = new System.Drawing.Point(162, 3);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(153, 107);
+            this.button20.TabIndex = 17;
+            this.button20.UseVisualStyleBackColor = true;
+            this.button20.Click += new System.EventHandler(this.button20_Click);
             // 
-            // lbOrder
+            // button21
             // 
-            this.lbOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbOrder.Location = new System.Drawing.Point(710, 763);
-            this.lbOrder.Name = "lbOrder";
-            this.lbOrder.Size = new System.Drawing.Size(139, 26);
-            this.lbOrder.TabIndex = 26;
-            this.lbOrder.Text = "Blank";
-            // 
-            // lbTable
-            // 
-            this.lbTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTable.Location = new System.Drawing.Point(710, 814);
-            this.lbTable.Name = "lbTable";
-            this.lbTable.Size = new System.Drawing.Size(139, 26);
-            this.lbTable.TabIndex = 27;
-            this.lbTable.Text = "Blank";
+            this.button21.Image = global::CafeManagementSystem.Properties.Resources.icons8_shipping_64;
+            this.button21.Location = new System.Drawing.Point(321, 3);
+            this.button21.Name = "button21";
+            this.button21.Size = new System.Drawing.Size(153, 107);
+            this.button21.TabIndex = 18;
+            this.button21.UseVisualStyleBackColor = true;
+            this.button21.Click += new System.EventHandler(this.button21_Click);
             // 
             // frmPlaceOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1738, 1039);
+            this.Controls.Add(this.lbOrderID);
+            this.Controls.Add(this.label);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.bNewOrder);
             this.Controls.Add(this.lbTable);
             this.Controls.Add(this.lbOrder);
             this.Controls.Add(this.label10);
@@ -336,9 +383,13 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label lbOrder;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button bNewOrder;
         private System.Windows.Forms.Label lbTable;
+        private System.Windows.Forms.Label lbOrder;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label;
+        private System.Windows.Forms.Label lbOrderID;
     }
 }

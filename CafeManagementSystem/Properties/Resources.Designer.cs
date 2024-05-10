@@ -73,6 +73,16 @@ namespace CafeManagementSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add {
+            get {
+                object obj = ResourceManager.GetObject("add", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cf {
             get {
                 object obj = ResourceManager.GetObject("cf", resourceCulture);
@@ -196,6 +206,16 @@ namespace CafeManagementSystem.Properties {
         internal static System.Drawing.Bitmap Home_icon_blue_1 {
             get {
                 object obj = ResourceManager.GetObject("Home_icon_blue-1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_admin_100 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-admin-100", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

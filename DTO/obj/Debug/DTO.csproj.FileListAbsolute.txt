@@ -10,3 +10,9 @@ C:\Users\Admin\Source\Repos\FinalCNPM\DTO\obj\Debug\DTO.csproj.AssemblyReference
 C:\Users\Admin\Source\Repos\FinalCNPM\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 C:\Users\Admin\Source\Repos\FinalCNPM\DTO\obj\Debug\DTO.dll
 C:\Users\Admin\Source\Repos\FinalCNPM\DTO\obj\Debug\DTO.pdb
+C:\Users\ASUS\Source\Repos\FinalCNPM2\DTO\bin\Debug\DTO.dll
+C:\Users\ASUS\Source\Repos\FinalCNPM2\DTO\bin\Debug\DTO.pdb
+C:\Users\ASUS\Source\Repos\FinalCNPM2\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+C:\Users\ASUS\Source\Repos\FinalCNPM2\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Source\Repos\FinalCNPM2\DTO\obj\Debug\DTO.dll
+C:\Users\ASUS\Source\Repos\FinalCNPM2\DTO\obj\Debug\DTO.pdb

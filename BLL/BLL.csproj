@@ -42,6 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLLCategories.cs" />
+    <Compile Include="BLLOrderData.cs" />
+    <Compile Include="BLLOrderDetails.cs" />
     <Compile Include="BLLProducts.cs" />
     <Compile Include="BLLRole.cs" />
     <Compile Include="BLLShift.cs" />

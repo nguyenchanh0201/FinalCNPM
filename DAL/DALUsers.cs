@@ -11,13 +11,13 @@ namespace DAL
     public class DALUsers
     {
         Users u; 
-        public DALUsers (String username, String password, String role,String name, String phone)
+        public DALUsers (String username, String password, int roleID,String name, String phone)
         {
-            u = new Users(username, password, role,name, phone);
+            u = new Users(username, password, roleID,name, phone);
         }
-        public void insert(String username, String password, String role, String name, String phone)
+        public void insert(String username, String password, int roleID, String name, String phone)
         {
-            string sql = "insert into users values ('" + username + "','" + password + "','" + role + "','" + name + "','" + phone + "')";
+            string sql = "insert into users values ('" + username + "','" + password + "','" + roleID + "','" + name + "','" + phone + "')";
             Connection.actionQuery(sql);
         }
 
@@ -40,14 +40,13 @@ namespace DAL
             Connection.actionQuery(sql);
         }
 
-        public String getRole(String username)
+        public string getRole(string username)
         {
-            string sql = "select role from users where username = '" + username + "'";
+            string sql = "SELECT roleName FROM Role WHERE roleID IN (SELECT roleID FROM users WHERE username = '" + username + "')";
             DataTable dt = Connection.selectQuery(sql);
             return dt.Rows[0][0].ToString();
-
-
         }
+
         public List<Users> getUsers()
         {
             List<Users> list = new List<Users>();
@@ -59,6 +58,8 @@ namespace DAL
                 list.Add(u);
             }
             return list;
-        }   
+        }
+        
+        
     }
 }

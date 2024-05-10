@@ -14,16 +14,19 @@ namespace CafeManagementSystem
 {
     public partial class frmPlaceOrder : Form
     {
-
+        String tableID;
+        public static string orderID;
+        BLLOrderData bLLOrderData = new BLLOrderData("", DateTime.Now, 0, "", "", "", "", "" , "");
         public frmPlaceOrder()
         {
             InitializeComponent();
-            flowLayoutPanel1.Enabled = false; 
+            flowLayoutPanel1.Enabled = false;
 
         }
 
         private void bpayment_Click(object sender, EventArgs e)
         {
+            //
             frmPayment
                 frm = new frmPayment();
             frm.ShowDialog();
@@ -48,8 +51,8 @@ namespace CafeManagementSystem
                 btn.Width = 153;
                 btn.Height = 107;
 
-                
-                btn.Image = Properties.Resources.icons8_table_501; 
+
+                btn.Image = Properties.Resources.icons8_table_501;
 
                 btn.ImageAlign = ContentAlignment.TopCenter;
                 btn.TextAlign = ContentAlignment.BottomCenter;
@@ -67,6 +70,7 @@ namespace CafeManagementSystem
             flowLayoutPanel3.Enabled = false;
             flowLayoutPanel4.Enabled = false;
             LoadProduct();
+            bNewOrder.Enabled = false;
 
 
         }
@@ -92,13 +96,15 @@ namespace CafeManagementSystem
         private void btnTable_Click(object sender, EventArgs e, string tableName)
         {
             lbTable.Text = tableName;
-            flowLayoutPanel3.Enabled = true;
-            flowLayoutPanel4.Enabled = true;
+            tableID = ((Button)sender).Name;
+            bNewOrder.Enabled = true;
+
+
         }
 
         void LoadCategory()
         {
-            
+
             List<ProductCategory> categories = BLLCategories.getCategory();
             foreach (ProductCategory c in categories)
             {
@@ -143,12 +149,15 @@ namespace CafeManagementSystem
             }
         }
 
-        private void btnProduct_Click(object sender, EventArgs e , string productName)
+        private void btnProduct_Click(object sender, EventArgs e, string productName)
         {
+            
+            frmDetails frmDetails = new frmDetails();
+            frmDetails.ShowDialog();
 
         }
 
-        
+
 
         private void btnCategory_Click(object sender, EventArgs e)
         {
@@ -160,6 +169,27 @@ namespace CafeManagementSystem
 
 
             LoadProductByCategory(categoryname);
+
+        }
+
+
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            lbOrderID.Text = bLLOrderData.createOrderID();
+            orderID = lbOrderID.Text;
+            bLLOrderData.AddOrderData(DateTime.Now, 0, frmLogin.username, tableID, lbOrder.Text, "0", frmShift.shiftID, "");
+            
+             
+
+
+            flowLayoutPanel3.Enabled = true;
+            flowLayoutPanel4.Enabled = true;
+        }
+
+        private void button32_Click(object sender, EventArgs e)
+        {
+            //Create membership ( Search for customer phoneNum, then if exist add to the order, else create new one and add, else let customerID is 0 
 
         }
     }

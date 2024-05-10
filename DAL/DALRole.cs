@@ -29,9 +29,9 @@ namespace DAL
             return list;
         }
 
-        public void insert(Role role)
+        public void insert(String roleName)
         {
-            string sql = "insert into role values ('" + role.getRoleID() + "','" + role.getRoleName() + "')";
+            string sql = "insert into role values ('" + roleName + "')";
             Connection.actionQuery(sql);
         }
 

@@ -25,8 +25,13 @@ namespace CafeManagementSystem
         private void btnSave_Click(object sender, EventArgs e)
         {
             string roleName = txtName.Text;
-            BLLRole bllRole = new BLLRole(0, roleName);
+            BLLRole bLLRole = new BLLRole(0,"");
+            bLLRole.insert(roleName);
+            //Message 
+            MessageBox.Show("Role Added Successfully, reload to see new contents");
+            this.Close();
             
+
         }
 
         private void btnClose_Click(object sender, EventArgs e)

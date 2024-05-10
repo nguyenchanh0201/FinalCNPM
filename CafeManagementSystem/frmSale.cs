@@ -20,6 +20,11 @@ namespace CafeManagementSystem
 
         private void bPlaceOrder_Click(object sender, EventArgs e)
         {
+            if (frmShift.shiftStatus == false)
+            {
+                MessageBox.Show("Please start the shift first");
+                return;
+            }
             frmPlaceOrder frm = new frmPlaceOrder();
             frm.ShowDialog();
 

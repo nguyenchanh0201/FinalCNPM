@@ -15,8 +15,9 @@ namespace CafeManagementSystem
     {
         DateTime shiftStart;
         DateTime shiftEnd;
-        BLLShift s = new BLLShift("", DateTime.Now, DateTime.Now);
-
+        BLLShift s = new BLLShift("", DateTime.Now, DateTime.Now, "");
+        public static Boolean shiftStatus = false;
+        public static string shiftID;
 
 
         public frmShift()
@@ -26,6 +27,8 @@ namespace CafeManagementSystem
             bHome.Enabled = true;
             bClose.Enabled = false;
             txtShiftID.Text = s.createShiftID();
+            shiftID = txtShiftID.Text;
+            lbDate.Text = DateTime.Now.ToString();
 
 
         }
@@ -38,6 +41,10 @@ namespace CafeManagementSystem
             txtOpentime.Focus();
             bHome.Enabled = false;
             bClose.Enabled = true;
+            shiftStatus = true;
+            shiftEnd = DateTime.Now;
+            s.addShift(shiftStart, shiftEnd, frmLogin.username);
+            
 
 
         }
@@ -49,11 +56,23 @@ namespace CafeManagementSystem
             //Change the text of the button to "Start Shift" and if the button is clicked again, it will start the shift
             txtClosetime.Focus();
             bHome.Click += new EventHandler(bHome_Click);
-           
-            s.addShift(shiftStart, shiftEnd);
+            //Update shiftEnd in that shift record
+            s.updateShift(txtShiftID.Text, shiftEnd);
+
             //Add to shift table
             bHome.Enabled = true;
-            bClose.Enabled = false; 
+            bClose.Enabled = false;
+            shiftStatus = false;
+        }
+
+        private void frmShift_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //Create message 
+            if (MessageBox.Show("Do you want to exit?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+
         }
     }
 }

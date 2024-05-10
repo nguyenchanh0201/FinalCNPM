@@ -13,14 +13,14 @@ namespace BLL
     {
         static DALUsers dalusers;
 
-        public BLLUsers(String username, String password, String role,String name,String phone)
+        public BLLUsers(String username, String password, int roleID,String name,String phone)
         {
-            dalusers = new DALUsers(username, password, role,name,phone);
+            dalusers = new DALUsers(username, password, roleID,name,phone);
         }
 
-        public void insert(String username, String password, String role, String name, String phone)
+        public void insert(String username, String password, int roleID, String name, String phone)
         {
-            dalusers.insert(username, password, role, name, phone);
+            dalusers.insert(username, password, roleID, name, phone);
         }
 
 
@@ -29,8 +29,12 @@ namespace BLL
             return dalusers.login(username,password);
         }
 
-        public String getRole(String username)
+        public static String getRole(String username)
         {
+            if (dalusers == null)
+            {
+                dalusers = new DALUsers("", "", 0, "", "");
+            }
             return dalusers.getRole(username);
         }
 
@@ -43,6 +47,8 @@ namespace BLL
             return dalusers.getUsers();
         }
 
+
+        
 
     }
 }

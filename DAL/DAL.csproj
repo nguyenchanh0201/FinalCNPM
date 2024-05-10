@@ -43,6 +43,8 @@
   <ItemGroup>
     <Compile Include="Connection.cs" />
     <Compile Include="DALCategory.cs" />
+    <Compile Include="DALOrderData.cs" />
+    <Compile Include="DALOrderDetails.cs" />
     <Compile Include="DALProducts.cs" />
     <Compile Include="DALRole.cs" />
     <Compile Include="DALShift.cs" />

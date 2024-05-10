@@ -9,22 +9,29 @@ namespace DTO
     public class OrderData
     {
 
-        private int orderID;
+        private string orderID;
         private DateTime orderDate;
-        private float totalAmount;
+        private decimal totalAmount;
+        private string username;
+        private string tableID;
+        private string orderType;
+        private string customerID;
+        private string shiftID;
         private string paymentMethod;
-        private int customerID;
-
-        public OrderData(int orderID, DateTime orderDate, float totalAmount, string paymentMethod, int customerID)
+        public OrderData(string orderID, DateTime orderDate, decimal totalAmount, string username, string tableID, string orderType, string customerID, string shiftID, string paymentMethod)
         {
             this.orderID = orderID;
             this.orderDate = orderDate;
             this.totalAmount = totalAmount;
-            this.paymentMethod = paymentMethod;
+            this.username = username;
+            this.tableID = tableID;
+            this.orderType = orderType;
             this.customerID = customerID;
+            this.shiftID = shiftID;
+            this.paymentMethod = paymentMethod;
         }
 
-        public int getOrderID()
+        public string getOrderID()
         {
             return orderID;
         }
@@ -34,19 +41,39 @@ namespace DTO
             return orderDate;
         }
 
-        public float getTotalAmount()
+        public decimal getTotalAmount()
         {
             return totalAmount;
         }
 
-        public string getPaymentMethod()
+        public string getUsername()
         {
-            return paymentMethod;
+            return username;
         }
 
-        public int getCustomerID()
+        public string getTableID()
+        {
+            return tableID;
+        }
+
+        public string getOrderType()
+        {
+            return orderType;
+        }
+
+        public string getCustomerID()
         {
             return customerID;
+        }
+
+        public string getShiftID()
+        {
+            return shiftID;
+        }
+
+        public string getPaymentMethod()
+        {
+            return paymentMethod; 
         }
     }
 }

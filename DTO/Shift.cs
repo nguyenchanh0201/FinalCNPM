@@ -11,18 +11,25 @@ namespace DTO
         private string shiftID;
         private DateTime shiftStart;
         private DateTime shiftEnd;
+        private string username; 
 
-        public Shift(string shiftID, DateTime shiftStart, DateTime shiftEnd)
+        public Shift(string shiftID, DateTime shiftStart, DateTime shiftEnd, string username)
         {
             this.shiftID = shiftID;
             
             this.shiftStart = shiftStart;
             this.shiftEnd = shiftEnd;
+            this.username = username;
         }
 
         public string getShiftID()
         {
             return shiftID;
+        }
+
+        public string getUsername()
+        {
+            return username;
         }
 
         public DateTime getShiftStart()

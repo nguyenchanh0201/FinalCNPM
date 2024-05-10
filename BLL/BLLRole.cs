@@ -17,9 +17,9 @@ namespace BLL
             dalRole = new DALRole(roleID, roleName);
         }
 
-        public void insert(Role role)
+        public void insert(String  roleName)
         {
-            dalRole.insert(role);
+            dalRole.insert(roleName);
         }
 
         public void update(int roleID, String roleName)
@@ -40,5 +40,7 @@ namespace BLL
             }
             return dalRole.getRole();
         }
+
+       
     }
 }

@@ -76,6 +76,24 @@
     <Compile Include="frmChangePwd.Designer.cs">
       <DependentUpon>frmChangePwd.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDetails.Designer.cs">
+      <DependentUpon>frmDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditAccount.Designer.cs">
+      <DependentUpon>frmEditAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditRole.Designer.cs">
+      <DependentUpon>frmEditRole.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +170,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmChangePwd.resx">
       <DependentUpon>frmChangePwd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDetails.resx">
+      <DependentUpon>frmDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditAccount.resx">
+      <DependentUpon>frmEditAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditRole.resx">
+      <DependentUpon>frmEditRole.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEmployee.resx">
       <DependentUpon>frmEmployee.cs</DependentUpon>
@@ -368,6 +395,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Sample_User_Icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-admin-100.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
