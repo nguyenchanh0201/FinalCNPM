@@ -47,9 +47,10 @@ namespace CafeManagementSystem
 
         }
 
-        private void grd_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
+            frmEditRole frmEditRole = new frmEditRole();
+            frmEditRole.ShowDialog();
         }
     }
 }

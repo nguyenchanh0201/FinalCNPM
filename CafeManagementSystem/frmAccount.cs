@@ -57,6 +57,7 @@ namespace CafeManagementSystem
         private void bEdit_Click(object sender, EventArgs e)
         {
             frmEditAccount frmEditAccount = new frmEditAccount();
+            frmEditAccount.ShowDialog();
         }
     }
 }
