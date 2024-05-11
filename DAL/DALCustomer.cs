@@ -12,9 +12,9 @@ namespace DAL
     {
         Customer c;
 
-        public DALCustomer(String customerId, String customerName, String phoneNumber, String gender, int points, String rank)
+        public DALCustomer(int customerID, string customerName, string phoneNumber, string gender, int points, int rankID)
         {
-            c = new Customer(int.Parse(customerId), customerName, phoneNumber, gender, points, rank);
+            c = new Customer(customerID, customerName, phoneNumber, gender, points, rankID);
         }
 
         public string createCustomerID()
@@ -23,10 +23,10 @@ namespace DAL
             return Connection.selectQuery(sql).Rows[0][0].ToString();
         }
 
-        public void insert(String customerName, String phoneNumber, string gender)
+        public void insert(String customerName, String phoneNumber, string gender, int points, int rankID)
         {
             string customerID = createCustomerID();
-            string sql = "insert into Customer values ('" + customerID + "', N'" + customerName + "', '" + phoneNumber + "',N'" + gender + "')";
+            string sql = "insert into Customer values('" + customerID + "', N'" + customerName + "', '" + phoneNumber + "'," + points + ", " + rankID + ")";
             // Rest of the code
             Connection.actionQuery(sql);
         }
@@ -37,6 +37,7 @@ namespace DAL
             Connection.actionQuery(sql);
         }
 
+        
 
 
     }
