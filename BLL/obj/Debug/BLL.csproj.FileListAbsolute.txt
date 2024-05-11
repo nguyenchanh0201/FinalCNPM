@@ -31,3 +31,14 @@ C:\Users\ASUS\Source\Repos\FinalCNPM2\BLL\obj\Debug\BLL.csproj.CoreCompileInputs
 C:\Users\ASUS\Source\Repos\FinalCNPM2\BLL\obj\Debug\BLL.csproj.CopyComplete
 C:\Users\ASUS\Source\Repos\FinalCNPM2\BLL\obj\Debug\BLL.dll
 C:\Users\ASUS\Source\Repos\FinalCNPM2\BLL\obj\Debug\BLL.pdb
+E:\cnpmfinal\BLL\bin\Debug\BLL.dll
+E:\cnpmfinal\BLL\bin\Debug\BLL.pdb
+E:\cnpmfinal\BLL\bin\Debug\DAL.dll
+E:\cnpmfinal\BLL\bin\Debug\DTO.dll
+E:\cnpmfinal\BLL\bin\Debug\DAL.pdb
+E:\cnpmfinal\BLL\bin\Debug\DTO.pdb
+E:\cnpmfinal\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+E:\cnpmfinal\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+E:\cnpmfinal\BLL\obj\Debug\BLL.csproj.CopyComplete
+E:\cnpmfinal\BLL\obj\Debug\BLL.dll
+E:\cnpmfinal\BLL\obj\Debug\BLL.pdb

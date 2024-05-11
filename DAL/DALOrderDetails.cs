@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DTO;
-
+using System.Data;
 namespace DAL
 {
     public class DALOrderDetails
@@ -62,8 +62,15 @@ namespace DAL
             // Get order details from database
             string sql = "SELECT * FROM OrderDetails WHERE orderID = '" + orderID + "'";
             List<OrderDetail> list = new List<OrderDetail>();
+            System.Data.DataTable dt = Connection.selectQuery(sql);
+            foreach (System.Data.DataRow dr in dt.Rows)
+            {
+                OrderDetail od = new OrderDetail(dr);
+                list.Add(od);
+            }
             // Add order details to list
             return list;
+
         }
 
 

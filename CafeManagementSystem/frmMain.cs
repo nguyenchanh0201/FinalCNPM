@@ -66,6 +66,7 @@ namespace CafeManagementSystem
         private void bOrder_Click(object sender, EventArgs e)
         {
             //if user is cashier , request password
+            AddControls(new frmOrder());
             
             
 

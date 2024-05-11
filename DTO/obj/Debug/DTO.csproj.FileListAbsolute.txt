@@ -16,3 +16,9 @@ C:\Users\ASUS\Source\Repos\FinalCNPM2\DTO\obj\Debug\DTO.csproj.AssemblyReference
 C:\Users\ASUS\Source\Repos\FinalCNPM2\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 C:\Users\ASUS\Source\Repos\FinalCNPM2\DTO\obj\Debug\DTO.dll
 C:\Users\ASUS\Source\Repos\FinalCNPM2\DTO\obj\Debug\DTO.pdb
+E:\cnpmfinal\DTO\bin\Debug\DTO.dll
+E:\cnpmfinal\DTO\bin\Debug\DTO.pdb
+E:\cnpmfinal\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+E:\cnpmfinal\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+E:\cnpmfinal\DTO\obj\Debug\DTO.dll
+E:\cnpmfinal\DTO\obj\Debug\DTO.pdb

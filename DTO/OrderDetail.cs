@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -48,5 +49,14 @@ namespace DTO
         {
             return price;
         }
+        public OrderDetail(DataRow dr)
+        {
+        this.orderDetailID = Convert.ToInt32(dr["orderDetailID"]);
+            this.orderID = dr["orderID"].ToString();
+            this.productID = dr["productID"].ToString();
+            this.quantity = Convert.ToInt32(dr["quantity"]);
+            this.price = Convert.ToDecimal(dr["price"]);
+        }
     }
+
 }
