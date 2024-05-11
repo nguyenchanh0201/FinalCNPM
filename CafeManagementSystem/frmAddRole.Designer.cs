@@ -33,8 +33,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnSave = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -63,7 +63,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(105, 193);
+            this.label2.Location = new System.Drawing.Point(105, 189);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(88, 20);
             this.label2.TabIndex = 1;
@@ -72,7 +72,7 @@
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(109, 216);
+            this.txtName.Location = new System.Drawing.Point(109, 212);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(222, 26);
             this.txtName.TabIndex = 2;
@@ -87,17 +87,6 @@
             this.panel2.Size = new System.Drawing.Size(491, 100);
             this.panel2.TabIndex = 5;
             // 
-            // btnSave
-            // 
-            this.btnSave.BackColor = System.Drawing.Color.Red;
-            this.btnSave.Location = new System.Drawing.Point(64, 16);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(129, 72);
-            this.btnSave.TabIndex = 0;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = false;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
             // btnClose
             // 
             this.btnClose.BackColor = System.Drawing.Color.Cyan;
@@ -108,6 +97,17 @@
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.BackColor = System.Drawing.Color.Red;
+            this.btnSave.Location = new System.Drawing.Point(64, 16);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(129, 72);
+            this.btnSave.TabIndex = 0;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // frmAddRole
             // 

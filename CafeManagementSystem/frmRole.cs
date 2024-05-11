@@ -52,5 +52,25 @@ namespace CafeManagementSystem
             frmEditRole frmEditRole = new frmEditRole();
             frmEditRole.ShowDialog();
         }
+
+        private void groupBox1_Enter_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listRole_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

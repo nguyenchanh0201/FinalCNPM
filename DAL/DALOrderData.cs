@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,9 +12,9 @@ namespace DAL
     {
         OrderData o;
 
-        public DALOrderData(string orderID, DateTime orderDate, decimal totalAmount, string username, string tableID, string orderType, string customerID, string shiftID, string paymentMethod)
+        public DALOrderData(string orderID, DateTime orderDate, decimal total, string username, string tableID, string orderType, string customerID, string shiftID, string paymentMethod)
         {
-            o = new OrderData(orderID, orderDate, totalAmount, username, tableID, orderType, customerID, shiftID, paymentMethod);
+            o = new OrderData(orderID, orderDate, total, username, tableID, orderType, customerID, shiftID, paymentMethod);
         }
 
         public string getOrderID()
@@ -27,9 +28,9 @@ namespace DAL
 
         }
 
-        public decimal getTotalAmount()
+        public decimal getTotal()
         {
-            return o.getTotalAmount();
+            return o.getTotal();
         }
 
         public string getUsername()
@@ -52,11 +53,11 @@ namespace DAL
             return o.getCustomerID();
         }
 
-        public void AddOrderData(DateTime orderDate, decimal totalAmmount, String username, String tableID, String orderType, String CustomerID, String shiftID, String paymentMethod)
+        public void AddOrderData(DateTime orderDate, decimal total, String username, String tableID, String orderType, String CustomerID, String shiftID, String paymentMethod)
         {
             // Add order data to database
             string orderID = createOrderID();
-            string sql = "insert into Orders values('" + orderID + "','" + orderDate + "','" + totalAmmount + "','" + username + "','" + tableID + "','" + orderType + "','" + CustomerID + "','" + shiftID + "','" + paymentMethod + "')";
+            string sql = "insert into Orders values('" + orderID + "','" + orderDate + "','" + total + "','" + username + "','" + tableID + "','" + orderType + "','" + CustomerID + "','" + shiftID + "','" + paymentMethod + "')";
 
             Connection.actionQuery(sql);
 
@@ -76,7 +77,33 @@ namespace DAL
             string sql = "update Orders set paymentMethod = '" + paymentMethod + "' where orderID = '" + orderID + "'";
             Connection.actionQuery(sql);
         }
-
+        public DataTable select()
+        {
+            string sql = "select * from Orders";
+            return Connection.selectQuery(sql);
+        }
+        public List<OrderData> getOrderData()
+        {
+            List<OrderData> list = new List<OrderData>();
+            string sql = "select * from Orders";
+            DataTable dt = Connection.selectQuery(sql);
+            foreach (DataRow dr in dt.Rows)
+            {
+                OrderData o = new OrderData(dr);
+                list.Add(o);
+            }
+            return list;
+        }
+        public void update(string orderID, DateTime orderDate, decimal total, string username, string tableID, string orderType, string CustomerID, string shiftID, string paymentMethod)
+        {
+            string sql = "update Orders set orderDate = '" + orderDate + "', total = '" + total + "', username = '" + username + "', tableID = '" + tableID + "', orderType = '" + orderType + "', customerID = '" + CustomerID + "', shiftID = '" + shiftID + "', paymentMethod = '" + paymentMethod + "' where orderID = '" + orderID + "'";
+            Connection.actionQuery(sql);
+        }
+        public void delete(string orderID)
+        {
+            string sql = "delete from Orders where orderID = '" + orderID + "'";
+            Connection.actionQuery(sql);
+        }
 
 
 

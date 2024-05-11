@@ -32,5 +32,6 @@ namespace DTO
             this.roleID = Convert.ToInt32(dr["roleID"]);
             this.roleName = dr["roleName"].ToString();
         }
+
     }
 }

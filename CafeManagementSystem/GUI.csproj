@@ -88,6 +88,12 @@
     <Compile Include="frmEditAccount.Designer.cs">
       <DependentUpon>frmEditAccount.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmEditOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditOrder.Designer.cs">
+      <DependentUpon>frmEditOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmEditRole.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +129,12 @@
     </Compile>
     <Compile Include="frmMomo.Designer.cs">
       <DependentUpon>frmMomo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOrder.Designer.cs">
+      <DependentUpon>frmOrder.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPayment.cs">
       <SubType>Form</SubType>
@@ -177,6 +189,9 @@
     <EmbeddedResource Include="frmEditAccount.resx">
       <DependentUpon>frmEditAccount.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmEditOrder.resx">
+      <DependentUpon>frmEditOrder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmEditRole.resx">
       <DependentUpon>frmEditRole.cs</DependentUpon>
     </EmbeddedResource>
@@ -194,6 +209,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMomo.resx">
       <DependentUpon>frmMomo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOrder.resx">
+      <DependentUpon>frmOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPayment.resx">
       <DependentUpon>frmPayment.cs</DependentUpon>

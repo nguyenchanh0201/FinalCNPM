@@ -22,13 +22,21 @@ namespace BLL
             dalRole.insert(roleName);
         }
 
-        public void update(int roleID, String roleName)
+        public static void update(int roleID, String roleName)
         {
+            if (dalRole == null)
+            {
+                dalRole = new DALRole(0, "");
+            }
             dalRole.update(roleID, roleName);
         }
 
-        public void delete(int roleID)
+        public static void delete(int roleID)
         {
+            if (dalRole == null)
+            {
+                dalRole = new DALRole(0, "");
+            }
             dalRole.delete(roleID);
         }
 
@@ -40,7 +48,14 @@ namespace BLL
             }
             return dalRole.getRole();
         }
-
+        public static DataTable select()
+        {
+            if (dalRole == null)
+            {
+                dalRole = new DALRole(0, "");
+            }
+            return dalRole.select();
+        }
        
     }
 }

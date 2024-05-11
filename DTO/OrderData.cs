@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,18 +12,18 @@ namespace DTO
 
         private string orderID;
         private DateTime orderDate;
-        private decimal totalAmount;
+        private decimal total;
         private string username;
         private string tableID;
         private string orderType;
         private string customerID;
         private string shiftID;
         private string paymentMethod;
-        public OrderData(string orderID, DateTime orderDate, decimal totalAmount, string username, string tableID, string orderType, string customerID, string shiftID, string paymentMethod)
+        public OrderData(string orderID, DateTime orderDate, decimal total, string username, string tableID, string orderType, string customerID, string shiftID, string paymentMethod)
         {
             this.orderID = orderID;
             this.orderDate = orderDate;
-            this.totalAmount = totalAmount;
+            this.total = total;
             this.username = username;
             this.tableID = tableID;
             this.orderType = orderType;
@@ -41,9 +42,9 @@ namespace DTO
             return orderDate;
         }
 
-        public decimal getTotalAmount()
+        public decimal getTotal()
         {
-            return totalAmount;
+            return total;
         }
 
         public string getUsername()
@@ -74,6 +75,18 @@ namespace DTO
         public string getPaymentMethod()
         {
             return paymentMethod; 
+        }
+        public OrderData(DataRow dr)
+        {
+            this.shiftID = dr["shiftID"].ToString();
+            this.orderID = dr["orderID"].ToString();
+            this.orderDate = Convert.ToDateTime(dr["orderDate"]);
+            this.total = Convert.ToDecimal(dr["total"]);
+            this.username = dr["username"].ToString();
+            this.tableID = dr["tableID"].ToString();
+            this.orderType = dr["orderType"].ToString();
+            this.customerID = dr["customerID"].ToString();
+            this.paymentMethod = dr["paymentMethod"].ToString();
         }
     }
 }

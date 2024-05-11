@@ -5,17 +5,18 @@ using System.Text;
 using System.Threading.Tasks;
 using DAL;
 using DTO;
+using System.Data;
 
 
 namespace BLL
 {
     public class BLLOrderData
     {
-        DALOrderData dalOrderData;
+        static DALOrderData dalOrderData;
 
-        public BLLOrderData(string orderID, DateTime orderDate, decimal totalAmount, string username, string tableID, string orderType, string customerID, string shiftID, string paymentMethod)
+        public BLLOrderData(string orderID, DateTime orderDate, decimal total, string username, string tableID, string orderType, string customerID, string shiftID, string paymentMethod)
         {
-            dalOrderData = new DALOrderData(orderID, orderDate, totalAmount, username, tableID, orderType, customerID, shiftID, paymentMethod);
+            dalOrderData = new DALOrderData(orderID, orderDate, total, username, tableID, orderType, customerID, shiftID, paymentMethod);
         }
 
         public string getOrderID()
@@ -29,9 +30,9 @@ namespace BLL
 
         }
 
-        public decimal getTotalAmount()
+        public decimal getTotal()
         {
-            return dalOrderData.getTotalAmount();
+            return dalOrderData.getTotal();
         }
 
         public string getUsername()
@@ -54,9 +55,9 @@ namespace BLL
             return dalOrderData.getCustomerID();
         }
 
-        public void AddOrderData(DateTime orderDate, decimal totalAmmount, String username, String tableID, String orderType, String CustomerID, String shiftID, string paymentMethod)
+        public void AddOrderData(DateTime orderDate, decimal total, String username, String tableID, String orderType, String CustomerID, String shiftID, string paymentMethod)
         {
-            dalOrderData.AddOrderData(orderDate, totalAmmount, username, tableID, orderType, CustomerID, shiftID, paymentMethod);
+            dalOrderData.AddOrderData(orderDate, total, username, tableID, orderType, CustomerID, shiftID, paymentMethod);
         }
 
         public String createOrderID()
@@ -67,6 +68,38 @@ namespace BLL
         public void updatePaymentMethod(string orderID, string paymentMethod)
         {
             dalOrderData.updatePaymentMethod(paymentMethod, orderID);
+        }
+        public static DataTable select()
+        {
+            if (dalOrderData == null)
+            {
+                dalOrderData = new DALOrderData("", DateTime.Now, 0, "", "", "", "", "", "");
+            }
+            return dalOrderData.select();
+        }
+        public static List<OrderData> getOrderData()
+        {
+            if (dalOrderData == null)
+            {
+                dalOrderData = new DALOrderData("", DateTime.Now, 0, "", "", "", "", "", "");
+            }
+            return dalOrderData.getOrderData();
+        }
+        public static void update(string orderID, DateTime orderDate, decimal total, string username, string tableID, string orderType, string CustomerID, string shiftID, string paymentMethod)
+        {
+            if (dalOrderData == null)
+            {
+                dalOrderData = new DALOrderData("", DateTime.Now, 0, "", "", "", "", "", "");
+            }
+            dalOrderData.update(orderID, orderDate, total, username, tableID, orderType, CustomerID, shiftID, paymentMethod);
+        }
+        public static void delete(string orderID)
+        {
+            if (dalOrderData == null)
+            {
+                dalOrderData = new DALOrderData("", DateTime.Now, 0, "", "", "", "", "", "");
+            }
+            dalOrderData.delete(orderID);
         }
     }
 }

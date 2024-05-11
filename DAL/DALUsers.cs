@@ -59,7 +59,23 @@ namespace DAL
             }
             return list;
         }
-        
-        
+        public void update(String username, String name, String phone)
+        {
+            string sql = "update users set name = '" + name + "', phone = '" + phone + "' where username = '" + username + "'";
+            Connection.actionQuery(sql);
+        }
+        public void delete(String username)
+        {
+            string sql = "delete from users where username = '" + username + "'";
+            Connection.actionQuery(sql);
+        }
+        public DataTable select()
+        {
+            string sql = "select * from users";
+
+
+            return Connection.selectQuery(sql);
+        }
+
     }
 }

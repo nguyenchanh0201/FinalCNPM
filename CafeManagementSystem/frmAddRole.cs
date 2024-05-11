@@ -30,13 +30,17 @@ namespace CafeManagementSystem
             //Message 
             MessageBox.Show("Role Added Successfully, reload to see new contents");
             this.Close();
-            
 
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

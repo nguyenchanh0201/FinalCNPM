@@ -150,3 +150,8 @@ C:\Users\ASUS\source\repos\FinalCNPM\CafeManagementSystem\obj\Debug\CafeManageme
 C:\Users\ASUS\source\repos\FinalCNPM\CafeManagementSystem\obj\Debug\CafeManagementSystem.frmEditRole.resources
 C:\Users\ASUS\source\repos\FinalCNPM\CafeManagementSystem\obj\Debug\CafeManagementSystem.frmEmployee.resources
 C:\Users\ASUS\source\repos\FinalCNPM\CafeManagementSystem\obj\Debug\CafeManagementSystem.frmRole.resources
+C:\Users\Admin\Source\Repos\FinalCNPM\CafeManagementSystem\obj\Debug\CafeManagementSystem.frmDetails.resources
+C:\Users\Admin\Source\Repos\FinalCNPM\CafeManagementSystem\obj\Debug\CafeManagementSystem.frmEditAccount.resources
+C:\Users\Admin\Source\Repos\FinalCNPM\CafeManagementSystem\obj\Debug\CafeManagementSystem.frmEditRole.resources
+C:\Users\Admin\source\repos\FinalCNPM\CafeManagementSystem\obj\Debug\CafeManagementSystem.frmOrder.resources
+C:\Users\Admin\source\repos\FinalCNPM\CafeManagementSystem\obj\Debug\CafeManagementSystem.frmEditOrder.resources

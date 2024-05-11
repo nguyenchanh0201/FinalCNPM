@@ -4,14 +4,14 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DTO; 
+using DTO;
 
 namespace DAL
 {
     public class DALRole
     {
         Role role;
-
+        
         public DALRole(int roleID, String roleName)
         {
             role = new Role(roleID, roleName);
@@ -27,6 +27,13 @@ namespace DAL
                 list.Add(r);
             }
             return list;
+        }
+        public DataTable select()
+        {
+            string sql = "select * from role";
+            
+
+            return Connection.selectQuery(sql);
         }
 
         public void insert(String roleName)
@@ -46,7 +53,6 @@ namespace DAL
             string sql = "delete from role where roleID = '" + roleID + "'";
             Connection.actionQuery(sql);
         }
-
         
 
     }
