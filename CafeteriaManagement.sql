@@ -1,173 +1,341 @@
--- Xóa cơ sở dữ liệu hiện tại nếu tồn tại
-USE MASTER
-DROP DATABASE IF EXISTS CafeteriaManagement;
+create database Cafe
 
--- Tạo cơ sở dữ liệu mới
-CREATE DATABASE CafeteriaManagement;
-GO
-USE CafeteriaManagement;
-GO
-
--- Bảng lưu thông tin về danh mục sản phẩm
-CREATE TABLE ProductCategory
-(
-    CategoryID INT IDENTITY PRIMARY KEY,        -- ID của danh mục
-    CategoryName NVARCHAR (100) NOT NULL        -- Tên của danh mục
+create table Role (
+ roleid int identity(1,1) primary key , 
+ roleName varchar(30) not null 
 )
-GO
 
--- Bảng lưu thông tin về sản phẩm
-CREATE TABLE Product
-(
-    ProductID INT IDENTITY PRIMARY KEY,          -- ID của sản phẩm
-    ProductName NVARCHAR (100) NOT NULL,        -- Tên của sản phẩm
-    CategoryID INT NOT NULL,                     -- ID của danh mục sản phẩm
-    Price FLOAT NOT NULL,                        -- Giá của sản phẩm
-    Status NVARCHAR(100) NOT NULL DEFAULT N'Available', -- Trạng thái của sản phẩm
-    FOREIGN KEY (CategoryID) REFERENCES dbo.ProductCategory(CategoryID) -- Khóa ngoại liên kết với bảng ProductCategory
+
+
+insert into role (roleName) values 
+	('cashier'),
+	('manager'),
+	('owner')
+
+create table users (
+	username varchar(20) primary key , 
+	password varchar(30) not null , 
+	roleID int not null ,
+	name nvarchar(30) , 
+	phone varchar(11) ,
+	foreign key (roleID) references Role(roleID)
+	)
+
+--drop table users
+
+insert into users (username, password, roleID) values 
+	('owner','owner',3),
+	('manager','manager',2),
+	('cashier','cashier',1)
+
+--select * from users
+-- Return role 
+--select roleName from Role where roleID in (select roleID from users where username like 'cashier')
+
+
+
+--UPDATE users
+--SET phone = '0393514980'
+--WHERE username = 'cashier';
+
+
+
+--delete from role where roleName like 'hello'
+
+
+
+
+
+create table tableCards (
+	id varchar(5) primary key,
+	tableName nvarchar(20) not null , 
+	status nvarchar(10) not null, 
 )
-GO
 
--- Bảng lưu thông tin về mã giảm giá
-CREATE TABLE Discount
-(
-    DiscountID INT IDENTITY PRIMARY KEY,         -- ID của mã giảm giá
-    DiscountCode NVARCHAR (100) NOT NULL,        -- Mã giảm giá
-    Percentage FLOAT NOT NULL                    -- Phần trăm giảm giá
+	
+
+
+go
+CREATE PROCEDURE AddNewTableCards
+AS
+BEGIN
+    DECLARE @Counter INT = 1;
+
+    WHILE @Counter <= 18
+    BEGIN
+        DECLARE @TableID NVARCHAR(50) = CONCAT('T00', @Counter);
+        DECLARE @TableName NVARCHAR(100) = CONCAT('Table ', @Counter);
+        DECLARE @Status NVARCHAR(50) = 'Empty'; -- You can set the default status here
+
+        INSERT INTO TableCards (ID, TableName, Status)
+        VALUES (@TableID, @TableName, @Status);
+
+        SET @Counter = @Counter + 1;
+    END
+END
+go
+--Table : 0 - Empty
+--Table : 1 - Processing
+--drop proc AddNewTableCards
+exec AddNewTableCards
+
+create table categories (
+	cateID varchar(5) primary key , 
+	cateName nvarchar(30) not null 
 )
-GO
 
--- Bảng lưu thông tin về khách hàng
-CREATE TABLE Customer
-(
-    CustomerID INT IDENTITY PRIMARY KEY,         -- ID của khách hàng
-    CustomerName NVARCHAR(100) NOT NULL,         -- Tên của khách hàng
-    PhoneNumber NVARCHAR(20) NOT NULL            -- Số điện thoại của khách hàng
+INSERT INTO categories (cateID, cateName) VALUES
+    ('C001', 'Uncategorized'),
+    ('C002', 'Milk Tea'),
+    ('C003', 'Food'),
+    ('C004', 'Juice'),
+    ('C005', 'Coffee'),
+    ('C006', 'Smoothies'),
+    ('C007', 'Tea'),
+    ('C008', 'Drinks');
+
+
+
+
+create table products (
+	pid varchar(5) primary key, 
+	pname nvarchar(30) not null , 
+	price decimal not null,
+	status int not null, 
+	cateID varchar(5) not null , 
+	foreign key (cateID) references categories(cateID) 
 )
-GO
 
--- Bảng lưu thông tin về đơn hàng
-CREATE TABLE OrderData
-(
-    OrderID INT IDENTITY PRIMARY KEY,            -- ID của đơn hàng
-    OrderDate DATE NOT NULL,                     -- Ngày đặt hàng
-    TotalAmount FLOAT NOT NULL,                  -- Tổng tiền
-    PaymentMethod NVARCHAR(100) NOT NULL,        -- Phương thức thanh toán
-    CustomerID INT,                              -- ID của khách hàng
-    FOREIGN KEY (CustomerID) REFERENCES dbo.Customer(CustomerID)  -- Khóa ngoại liên kết với bảng Customer
+
+-- Insert additional products for each category
+INSERT INTO products (pid, pname, price, status, cateID) VALUES
+    -- Uncategorized (drinks)
+    ('P006', 'Sparkling Water', 1.50, 1, 'C001'),
+    ('P007', 'Pepsi', 2.00, 1, 'C001'),
+    ('P008', 'Sting', 2.20, 1, 'C001'),
+
+    -- Milk Tea
+    ('P009', 'Brown Sugar Boba Milk Tea', 4.50, 1, 'C002'),
+    ('P010', 'Taro Milk Tea', 4.00, 1, 'C002'),
+    ('P011', 'Thai Milk Tea', 3.75, 1, 'C002'),
+
+    -- Food
+    ('P012', 'Chicken Caesar Salad', 7.50, 1, 'C003'),
+    ('P013', 'Margherita Pizza', 12.00, 1, 'C003'),
+    ('P014', 'Beef Burger', 9.00, 1, 'C003'),
+
+    -- Juice
+    ('P015', 'Apple Juice', 2.00, 1, 'C004'),
+    ('P016', 'Grapefruit Juice', 2.20, 1, 'C004'),
+    ('P017', 'Pineapple Juice', 2.10, 1, 'C004'),
+
+    -- Coffee
+    ('P018', 'Espresso', 2.50, 1, 'C005'),
+    ('P019', 'Cappuccino', 3.00, 1, 'C005'),
+    ('P020', 'Latte', 3.25, 1, 'C005'),
+
+    -- Smoothies
+    ('P021', 'Strawberry Banana Smoothie', 4.75, 1, 'C006'),
+    ('P022', 'Mango Pineapple Smoothie', 4.80, 1, 'C006'),
+    ('P023', 'Blueberry Kale Smoothie', 5.00, 1, 'C006'),
+
+    -- Tea
+    ('P024', 'Green Tea', 2.00, 1, 'C007'),
+    ('P025', 'Earl Grey Tea', 2.25, 1, 'C007'),
+    ('P026', 'Chamomile Tea', 2.20, 1, 'C007'),
+
+    -- Drinks
+    ('P027', 'Lemonade', 2.50, 1, 'C008'),
+    ('P028', 'Iced Tea', 2.25, 1, 'C008'),
+    ('P029', 'Soda', 1.75, 1, 'C008');
+
+
+
+--select * from products
+--select * from categories
+
+--select * from products where cateID in (select cateID from categories where cateName like 'Milk Tea')
+--select * from products where cateID = 'C001'
+
+
+
+create table shift (
+	shiftID varchar(20) primary key ,
+	shiftStart datetime , 
+	username varchar(20) not null ,
+	shiftEnd datetime,
+	foreign key (username) references users(username)
 )
-GO
 
--- Bảng lưu thông tin chi tiết của mỗi đơn hàng
-CREATE TABLE OrderDetail
-(
-    OrderDetailID INT IDENTITY PRIMARY KEY,       -- ID của chi tiết đơn hàng
-    OrderID INT NOT NULL,                         -- ID của đơn hàng
-    ProductID INT NOT NULL,                       -- ID của sản phẩm
-    Quantity INT NOT NULL,                        -- Số lượng
-    Price FLOAT NOT NULL,                         -- Giá tiền
-    FOREIGN KEY (OrderID) REFERENCES dbo.OrderData(OrderID),         -- Khóa ngoại liên kết với bảng OrderData
-    FOREIGN KEY (ProductID) REFERENCES dbo.Product(ProductID)   -- Khóa ngoại liên kết với bảng Product
+--drop table shift
+--Select date from shift
+--select * from shift
+
+go
+CREATE PROCEDURE generate_shiftID
+AS
+BEGIN
+    DECLARE @new_shiftID VARCHAR(20);
+    DECLARE @today_date VARCHAR(6);
+    DECLARE @last_shiftID VARCHAR(20);
+
+    -- Get today's date in 'ddmmyy' format
+    SET @today_date = FORMAT(GETDATE(), 'ddMMyy');
+
+    -- Get the last shiftID
+    SELECT TOP 1 @last_shiftID = shiftID
+    FROM shift
+    WHERE shiftID LIKE CONCAT('S', @today_date, '%')
+    ORDER BY shiftID DESC;
+
+    -- If last_shiftID is null, set the new_shiftID to the first of the day
+    IF @last_shiftID IS NULL
+    BEGIN
+        SET @new_shiftID = CONCAT('S', @today_date, '001');
+    END
+    ELSE
+    BEGIN
+        -- Extract the numeric part and increment by 1
+        DECLARE @numeric_part INT;
+        SET @numeric_part = CAST(SUBSTRING(@last_shiftID, 8, 3) AS INT) + 1;
+
+        -- Combine the components to form the new shiftID
+        SET @new_shiftID = CONCAT('S', @today_date, FORMAT(@numeric_part, '000'));
+    END
+
+    -- Return the generated shiftID
+    SELECT @new_shiftID AS new_shiftID;
+END;
+go
+
+--exec generate_shiftID
+create table Ranks (
+	rankID varchar(5) primary key ,
+	rankName nvarchar(30) not null , 
+	goalPoints int , 
+	discount int , 
 )
-GO
 
--- Bảng lưu thông tin về thẻ bàn
-CREATE TABLE TableCard
-(
-    TableCardID INT IDENTITY PRIMARY KEY,         -- ID của thẻ bàn
-    TableName NVARCHAR(100) NOT NULL,             -- Tên của thẻ bàn
-    Status NVARCHAR(100) NOT NULL DEFAULT N'Available'   -- Trạng thái của thẻ bàn
-)
-GO
+insert into ranks (rankID, rankName, goalPoints, discount) values 
+	('1', 'Bronze',1,0),
+	('2', 'Silver',100,5),
+	('3', 'Gold',200,10)
 
--- Bảng lưu thông tin thống kê
-CREATE TABLE StatisticalData
-(
-    StatisticalID INT IDENTITY PRIMARY KEY,     -- ID của dữ liệu thống kê
-    OrderDate DATE NOT NULL,                    -- Ngày đặt hàng
-    OrderTime TIME NOT NULL,                    -- Thời gian đặt hàng
-    OrderMethod NVARCHAR(100) NOT NULL,         -- Phương thức đặt hàng: mang về, tại quán, shipper
-    Total FLOAT NOT NULL,                       -- Doanh thu
-    CustomerID INT                               -- ID của khách hàng
+CREATE TABLE Customers (
+    id VARCHAR(5) PRIMARY KEY,
+    name NVARCHAR(40),
+    phoneNum VARCHAR(12),
+    gender NVARCHAR(6) CHECK (gender IN ('male', 'female')),
+	rankID varchar(5) not null , 
+	points int ,
+	foreign key (rankID) references Ranks(rankID)
 );
-GO
 
--- Bảng lưu thông tin về điểm và hạng thành viên của khách hàng
-CREATE TABLE CustomerLoyalty (
-    CustomerLoyaltyID INT IDENTITY PRIMARY KEY,
-    CustomerID INT NOT NULL,
-    Points INT NOT NULL DEFAULT 0,
-    MembershipLevel NVARCHAR(100) NOT NULL DEFAULT N'Bronze',
-    FOREIGN KEY (CustomerID) REFERENCES Customer(CustomerID)
+insert into Customers (id, name, phoneNum, gender, rankID, points) values 
+	('0','None','0000000000','male',1,0),
+	('1', 'Trung Chanh','0393514981','male', 1, 1),
+	('2', 'Trung Chanh1','0393514982','male', 2, 101),
+	('3', 'Trung Chanh2','0393514983','male', 3, 220)
+
+
+--select * from Customers
+
+--select * from ranks
+
+
+
+
+	
+
+create table Orders (
+	orderID varchar(20) primary key , 
+	orderDate datetime not null , 
+	total decimal  ,
+	username varchar(20) not null, 
+	tableID varchar(5) not null , 
+	orderType varchar(20) not null ,
+	customerId varchar(5) not null , 
+	shiftID varchar(20) not null , 
+	paymentMethod varchar(20) , 
+	foreign key (username) references users(username),
+	foreign key (tableID) references tableCards(id),
+	foreign key (customerID) references Customers(id),
+	foreign key (shiftID) references Shift(shiftID) 
+)
+
+--drop table Orders
+select * from orders
+--delete from orders where orderID like 'O120524001'
+
+
+CREATE TABLE OrderDetails (
+    orderDetailID int identity(1,1) PRIMARY KEY,
+    orderID VARCHAR(20) NOT NULL,
+    productID VARCHAR(5) NOT NULL,
+    quantity INT,
+    price DECIMAL NOT NULL,
+	note nvarchar(100) ,
+    FOREIGN KEY (orderID) REFERENCES Orders(orderID),
+    FOREIGN KEY (productID) REFERENCES Products(pid)
 );
-GO
+--drop table OrderDetails
+--select * from OrderDetails
+	
 
--- INSERT DATABASE
-INSERT INTO ProductCategory (CategoryName)
-VALUES ('Drinks'), ('Desserts'), ('Main Dishes'), ('Appetizers');
+--generate Order ID 
 
-INSERT INTO Product (ProductName, CategoryID, Price, Status)
-VALUES ('Espresso', 1, 2.5, 'Available'),
-       ('Cappuccino', 1, 3.0, 'Available'),
-       ('Chocolate Cake', 2, 5.0, 'Available'),
-       ('Caesar Salad', 4, 7.5, 'Available');
+go
+CREATE PROCEDURE generate_orderID
+AS
+BEGIN
+    DECLARE @new_orderID VARCHAR(20);
+    DECLARE @today_date VARCHAR(6);
+    DECLARE @last_orderID VARCHAR(20);
 
-INSERT INTO TableCard (TableName, Status)
-VALUES ('Table 1', 'Available'),
-       ('Table 2', 'Available'),
-       ('Table 3', 'Available'),
-       ('Table 4', 'Booked');
+    -- Get today's date in 'ddmmyy' format
+    SET @today_date = FORMAT(GETDATE(), 'ddMMyy');
 
-INSERT INTO Customer (CustomerName, PhoneNumber)
-VALUES ('John Smith', '1234567890'),
-       ('Alice Johnson', '0987654321'),
-       ('Bob Brown', '5556667777');
+    -- Get the last orderID
+    SELECT TOP 1 @last_orderID = orderID
+    FROM Orders
+    WHERE orderID LIKE CONCAT('O', @today_date, '%')
+    ORDER BY orderID DESC;
 
-INSERT INTO OrderData (OrderDate, TotalAmount, PaymentMethod, CustomerID)
-VALUES 
-    ('2024-04-18', 20.5, 'Cash', 1),
-    ('2024-04-18', 15.0, 'Credit Card', 2),
-    ('2024-04-19', 30.0, 'Cash', NULL); -- Changed CustomerID to NULL since no customer is associated with this order
+    -- If last_orderID is null, set the new_orderID to the first of the day
+    IF @last_orderID IS NULL
+    BEGIN
+        SET @new_orderID = CONCAT('O', @today_date, '001');
+    END
+    ELSE
+    BEGIN
+        -- Extract the numeric part and increment by 1
+        DECLARE @numeric_part INT;
+        SET @numeric_part = CAST(SUBSTRING(@last_orderID, 8, 3) AS INT) + 1;
 
-INSERT INTO OrderDetail (OrderID, ProductID, Quantity, Price)
-VALUES 
-    (1, 1, 2, 5.0),
-    (1, 3, 1, 10.0),
-    (2, 2, 1, 3.0),
-    (3, 4, 2, 15.0);
+        -- Combine the components to form the new orderID
+        SET @new_orderID = CONCAT('O', @today_date, FORMAT(@numeric_part, '000'));
+    END
 
--- Thêm dữ liệu vào bảng StatisticalData
-INSERT INTO StatisticalData (OrderDate, OrderTime, OrderMethod, Total, CustomerID)
-VALUES 
-    ('2024-04-18', '08:30:00', 'Take-away', 20.5, 1),
-    ('2024-04-18', '09:15:00', 'Dine-in', 15.0, 2),
-    ('2024-04-18', '12:45:00', 'Shipping', 30.0, NULL), -- Changed CustomerID to NULL since no customer is associated with this order
-    ('2024-04-19', '10:30:00', 'Take-away', 0.0, NULL); -- Change the last value accordingly
+    -- Return the generated orderID
+    SELECT @new_orderID AS new_orderID;
+END;
+go
+--exec generate_orderID
 
--- Thêm dữ liệu vào bảng CustomerLoyalty
-INSERT INTO CustomerLoyalty (CustomerID, Points, MembershipLevel)
-VALUES
-    (1, 50, N'Silver'),
-    (2, 200, N'Gold'),
-    (3, 800, N'Diamond');
 
--- TEST
-SELECT * FROM ProductCategory;
-SELECT * FROM Product;
-SELECT * FROM TableCard;
-SELECT * FROM Customer;
-SELECT * FROM OrderData;
-SELECT * FROM OrderDetail;
-SELECT * FROM StatisticalData;
-SELECT * FROM CustomerLoyalty;
 
-GO
 
--- Câu truy vấn để lấy thông tin khách hàng và hạng thành viên
-SELECT 
-    c.CustomerName, 
-    c.PhoneNumber, 
-    cl.Points, 
-    cl.MembershipLevel
-FROM Customer c
-JOIN CustomerLoyalty cl ON c.CustomerID = cl.CustomerID;
+
+
+
+
+
+
+--SELECT ORDERID, TOTAL, USERNAME, ORDERTYPE,CUSTOMERID 
+--FROM orders 
+--WHERE shiftID IN (
+    --SELECT shiftID 
+    --FROM shift 
+    --WHERE CONVERT(DATE, shiftEnd) = '2024-05-10');
+
+
