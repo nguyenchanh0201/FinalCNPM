@@ -11,16 +11,18 @@ namespace DTO
         private int customerID;
         private string customerName;
         private string phoneNumber;
+        private string gender;
         private int points;
-        private string membershipLevel;
+        private int rankID;
 
-        public Customer(int customerID, string customerName, string phoneNumber, int points, string membershipLevel)
+        public Customer(int customerID, string customerName, string phoneNumber, string gender, int points, int rankID)
         {
             this.customerID = customerID;
             this.customerName = customerName;
             this.phoneNumber = phoneNumber;
+            this.gender = gender;
             this.points = points;
-            this.membershipLevel = membershipLevel;
+            this.rankID = rankID;
         }
 
         public int getCustomerID()
@@ -43,9 +45,14 @@ namespace DTO
             return points;
         }
 
-        public string getMembershipLevel()
+        public int getMembershipLevel()
         {
-            return membershipLevel;
+            return rankID;
+        }
+
+        public string getGender()
+        {
+            return gender;
         }
     }
 }
