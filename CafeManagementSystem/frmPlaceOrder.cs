@@ -73,6 +73,8 @@ namespace CafeManagementSystem
             flowLayoutPanel4.Enabled = false;
             LoadProduct();
             bNewOrder.Enabled = false;
+
+            
             
 
 

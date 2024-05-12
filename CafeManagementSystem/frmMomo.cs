@@ -15,6 +15,10 @@ namespace CafeManagementSystem
         public frmMomo()
         {
             InitializeComponent();
+            lbReturn.Text = "0";
+            lbTotal.Text = frmPlaceOrder.total.ToString();
+            txtReceived.Text = frmPlaceOrder.total.ToString();
+            lbOrderID.Text = frmPlaceOrder.orderID;
         }
     }
 }
