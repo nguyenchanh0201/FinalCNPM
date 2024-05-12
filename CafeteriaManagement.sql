@@ -272,14 +272,14 @@ CREATE TABLE OrderDetails (
     orderDetailID int identity(1,1) PRIMARY KEY,
     orderID VARCHAR(20) NOT NULL,
     productID VARCHAR(5) NOT NULL,
+	productName varchar(100) ,
     quantity INT,
     price DECIMAL NOT NULL,
-	note nvarchar(100) ,
+	 
     FOREIGN KEY (orderID) REFERENCES Orders(orderID),
     FOREIGN KEY (productID) REFERENCES Products(pid)
 );
---drop table OrderDetails
---select * from OrderDetails
+--drop table OrderDetails --select * from OrderDetails
 	
 
 --generate Order ID 
