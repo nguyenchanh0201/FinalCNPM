@@ -13,6 +13,7 @@ namespace CafeManagementSystem
 {
     public partial class frmDetails : Form
     {
+        public static int quantity = 0;
         public frmDetails()
         {
             InitializeComponent();
@@ -20,8 +21,9 @@ namespace CafeManagementSystem
 
         private void bConfirm_Click(object sender, EventArgs e)
         {
-            string orderID = frmPlaceOrder.orderID; 
-            
+            quantity = Convert.ToInt32(quantityBox.Value);
+            //Close the form
+            this.Close();
         }
     }
 }

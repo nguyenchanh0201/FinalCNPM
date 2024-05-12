@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button23 = new System.Windows.Forms.Button();
             this.button22 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbReceive = new System.Windows.Forms.Label();
+            this.lbTotal = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lbReturn = new System.Windows.Forms.Label();
             this.centerPanel = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -58,6 +58,30 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(486, 722);
             this.flowLayoutPanel1.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.Image = global::CafeManagementSystem.Properties.Resources.download__7_;
+            this.button1.Location = new System.Drawing.Point(3, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(483, 198);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Cash";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackgroundImage = global::CafeManagementSystem.Properties.Resources.download__6_1;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button2.Location = new System.Drawing.Point(3, 207);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(483, 186);
+            this.button2.TabIndex = 1;
+            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // panel2
             // 
@@ -89,6 +113,7 @@
             this.button23.TabIndex = 3;
             this.button23.Text = "Pay and Print Bills";
             this.button23.UseVisualStyleBackColor = true;
+            this.button23.Click += new System.EventHandler(this.button23_Click);
             // 
             // button22
             // 
@@ -111,8 +136,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.lbReceive);
+            this.groupBox1.Controls.Add(this.lbTotal);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(530, 109);
@@ -122,23 +147,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Total";
             // 
-            // label4
+            // lbReceive
             // 
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(429, 35);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(131, 38);
-            this.label4.TabIndex = 25;
-            this.label4.Text = "500.000đ";
+            this.lbReceive.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbReceive.Location = new System.Drawing.Point(429, 35);
+            this.lbReceive.Name = "lbReceive";
+            this.lbReceive.Size = new System.Drawing.Size(131, 38);
+            this.lbReceive.TabIndex = 25;
+            this.lbReceive.Text = "500.000đ";
             // 
-            // label2
+            // lbTotal
             // 
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(16, 35);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(198, 38);
-            this.label2.TabIndex = 24;
-            this.label2.Text = "200.000đ";
+            this.lbTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTotal.Location = new System.Drawing.Point(16, 35);
+            this.lbTotal.Name = "lbTotal";
+            this.lbTotal.Size = new System.Drawing.Size(198, 38);
+            this.lbTotal.TabIndex = 24;
+            this.lbTotal.Text = "200.000đ";
             // 
             // label1
             // 
@@ -151,7 +176,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.lbReturn);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(1285, 109);
             this.groupBox2.Name = "groupBox2";
@@ -160,14 +185,14 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Return";
             // 
-            // label5
+            // lbReturn
             // 
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(143, 35);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(131, 38);
-            this.label5.TabIndex = 26;
-            this.label5.Text = "300.000đ";
+            this.lbReturn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbReturn.Location = new System.Drawing.Point(143, 35);
+            this.lbReturn.Name = "lbReturn";
+            this.lbReturn.Size = new System.Drawing.Size(131, 38);
+            this.lbReturn.TabIndex = 26;
+            this.lbReturn.Text = "300.000đ";
             // 
             // centerPanel
             // 
@@ -175,30 +200,6 @@
             this.centerPanel.Name = "centerPanel";
             this.centerPanel.Size = new System.Drawing.Size(1160, 777);
             this.centerPanel.TabIndex = 7;
-            // 
-            // button1
-            // 
-            this.button1.Image = global::CafeManagementSystem.Properties.Resources.download__7_;
-            this.button1.Location = new System.Drawing.Point(3, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(483, 198);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Cash";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackgroundImage = global::CafeManagementSystem.Properties.Resources.download__6_1;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.Location = new System.Drawing.Point(3, 207);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(483, 186);
-            this.button2.TabIndex = 1;
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // frmPayment
             // 
@@ -236,10 +237,10 @@
         private System.Windows.Forms.Button button23;
         private System.Windows.Forms.Button button22;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbReceive;
+        private System.Windows.Forms.Label lbTotal;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lbReturn;
         private System.Windows.Forms.Panel centerPanel;
     }
 }

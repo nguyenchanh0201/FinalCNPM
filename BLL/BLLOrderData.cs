@@ -65,9 +65,13 @@ namespace BLL
             return dalOrderData.createOrderID();
         }
 
-        public void updatePaymentMethod(string orderID, string paymentMethod)
+        public static void updatePaymentMethodAndTotal(string orderID, string paymentMethod, decimal total)
         {
-            dalOrderData.updatePaymentMethod(paymentMethod, orderID);
+            if (dalOrderData == null)
+            {
+                dalOrderData = new DALOrderData("", DateTime.Now, 0, "", "", "", "", "", "");
+            }
+            dalOrderData.updatePaymentMethodAndTotal(orderID, paymentMethod, total);
         }
         public static DataTable select()
         {

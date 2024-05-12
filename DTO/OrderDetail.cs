@@ -12,16 +12,19 @@ namespace DTO
         private int orderDetailID;
         private string orderID;
         private string productID;
+        private string productName;
         private int quantity;
         private decimal price;
 
-        public OrderDetail(int orderDetailID, string orderID, string productID, int quantity, decimal price)
+        public OrderDetail(int orderDetailID, string orderID, string productID,  string productName, int quantity, decimal price)
         {
             this.orderDetailID = orderDetailID;
             this.orderID = orderID;
             this.productID = productID;
             this.quantity = quantity;
             this.price = price;
+            this.productName = productName; 
+
         }
 
         public int getOrderDetailID()
@@ -47,6 +50,10 @@ namespace DTO
         public decimal getPrice()
         {
             return price;
+        }
+        public string getProductName()
+        {
+            return productName;
         }
     }
 }

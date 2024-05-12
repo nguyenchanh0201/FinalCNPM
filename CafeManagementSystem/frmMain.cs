@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BLL;
 
 
 namespace CafeManagementSystem
@@ -148,6 +149,8 @@ namespace CafeManagementSystem
 
         private void bClose_Click(object sender, EventArgs e)
         {
+            
+            //close the application
             Application.Exit();
         }
 
@@ -157,7 +160,12 @@ namespace CafeManagementSystem
         }
 
         private void bLogout_Click(object sender, EventArgs e)
-        {
+        {   //Check if the shift is closed or not
+            if (frmShift.shiftStatus == true)
+            {
+                MessageBox.Show("Please close the shift before logging out");
+                return;
+            }
             //Log the user out 
             frmLogin frm = new frmLogin();
             frm.Show();

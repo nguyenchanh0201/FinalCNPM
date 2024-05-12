@@ -72,9 +72,9 @@ namespace DAL
             return orderID;
         }
 
-        public void updatePaymentMethod(string paymentMethod, string orderID)
+        public void updatePaymentMethodAndTotal(string orderID, string paymentMethod, decimal total)
         {
-            string sql = "update Orders set paymentMethod = '" + paymentMethod + "' where orderID = '" + orderID + "'";
+            string sql = "update Orders set paymentMethod = '" + paymentMethod + "', total = '" + total + "' where orderID = '" + orderID + "'";
             Connection.actionQuery(sql);
         }
         public DataTable select()

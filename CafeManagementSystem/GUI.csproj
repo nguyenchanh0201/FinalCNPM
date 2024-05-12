@@ -420,5 +420,20 @@
   <ItemGroup>
     <None Include="Resources\icons8-admin-100.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-edit-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-delete-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %286%292.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-edit-241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-delete-301.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
