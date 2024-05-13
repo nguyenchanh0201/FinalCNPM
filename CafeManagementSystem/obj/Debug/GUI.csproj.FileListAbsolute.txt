@@ -159,3 +159,11 @@ C:\Users\ASUS\Source\Repos\FinalCNPM\CafeManagementSystem\obj\Debug\CafeManageme
 C:\Users\ASUS\Source\Repos\FinalCNPM\CafeManagementSystem\obj\Debug\CafeManagementSystem.frmOrder.resources
 C:\Users\ASUS\source\repos\FinalCNPM2\CafeManagementSystem\obj\Debug\CafeManagementSystem.frmEditOrder.resources
 C:\Users\ASUS\source\repos\FinalCNPM2\CafeManagementSystem\obj\Debug\CafeManagementSystem.frmOrder.resources
+C:\Users\ASUS\source\repos\FinalCNPM2\CafeManagementSystem\bin\Debug\log4net.dll
+C:\Users\ASUS\source\repos\FinalCNPM2\CafeManagementSystem\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ASUS\source\repos\FinalCNPM2\CafeManagementSystem\bin\Debug\zxing.dll
+C:\Users\ASUS\source\repos\FinalCNPM2\CafeManagementSystem\bin\Debug\zxing.presentation.dll
+C:\Users\ASUS\source\repos\FinalCNPM2\CafeManagementSystem\bin\Debug\log4net.xml
+C:\Users\ASUS\source\repos\FinalCNPM2\CafeManagementSystem\bin\Debug\Newtonsoft.Json.xml
+C:\Users\ASUS\source\repos\FinalCNPM2\CafeManagementSystem\bin\Debug\zxing.xml
+C:\Users\ASUS\source\repos\FinalCNPM2\CafeManagementSystem\bin\Debug\zxing.presentation.xml

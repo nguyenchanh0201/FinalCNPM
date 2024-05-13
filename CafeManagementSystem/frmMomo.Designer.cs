@@ -38,6 +38,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lbOrderID = new System.Windows.Forms.Label();
+            this.bGenerate = new System.Windows.Forms.Button();
+            this.bCheckStatus = new System.Windows.Forms.Button();
+            this.txtLink = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.qrMomo)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -47,7 +50,7 @@
             // 
             this.qrMomo.Location = new System.Drawing.Point(758, 166);
             this.qrMomo.Name = "qrMomo";
-            this.qrMomo.Size = new System.Drawing.Size(293, 240);
+            this.qrMomo.Size = new System.Drawing.Size(465, 324);
             this.qrMomo.TabIndex = 0;
             this.qrMomo.TabStop = false;
             // 
@@ -112,9 +115,9 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(311, 298);
+            this.label2.Location = new System.Drawing.Point(753, 115);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(345, 93);
+            this.label2.Size = new System.Drawing.Size(345, 35);
             this.label2.TabIndex = 24;
             this.label2.Text = "Give this QR to Customer: ";
             // 
@@ -136,11 +139,41 @@
             this.lbOrderID.TabIndex = 26;
             this.lbOrderID.Text = "?";
             // 
+            // bGenerate
+            // 
+            this.bGenerate.Location = new System.Drawing.Point(316, 221);
+            this.bGenerate.Name = "bGenerate";
+            this.bGenerate.Size = new System.Drawing.Size(138, 86);
+            this.bGenerate.TabIndex = 27;
+            this.bGenerate.Text = "Generate";
+            this.bGenerate.UseVisualStyleBackColor = true;
+            this.bGenerate.Click += new System.EventHandler(this.bGenerate_Click);
+            // 
+            // bCheckStatus
+            // 
+            this.bCheckStatus.Location = new System.Drawing.Point(493, 221);
+            this.bCheckStatus.Name = "bCheckStatus";
+            this.bCheckStatus.Size = new System.Drawing.Size(138, 86);
+            this.bCheckStatus.TabIndex = 28;
+            this.bCheckStatus.Text = "Check Pay status";
+            this.bCheckStatus.UseVisualStyleBackColor = true;
+            this.bCheckStatus.Click += new System.EventHandler(this.bCheckStatus_Click);
+            // 
+            // txtLink
+            // 
+            this.txtLink.Location = new System.Drawing.Point(316, 342);
+            this.txtLink.Name = "txtLink";
+            this.txtLink.Size = new System.Drawing.Size(191, 20);
+            this.txtLink.TabIndex = 29;
+            // 
             // frmMomo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1247, 585);
+            this.Controls.Add(this.txtLink);
+            this.Controls.Add(this.bCheckStatus);
+            this.Controls.Add(this.bGenerate);
             this.Controls.Add(this.lbOrderID);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -155,6 +188,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -170,5 +204,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lbOrderID;
+        private System.Windows.Forms.Button bGenerate;
+        private System.Windows.Forms.Button bCheckStatus;
+        private System.Windows.Forms.TextBox txtLink;
     }
 }
