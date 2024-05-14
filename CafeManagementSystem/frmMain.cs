@@ -119,9 +119,14 @@ namespace CafeManagementSystem
 
         private void bLoyalty_Click(object sender, EventArgs e)
         {
+            
             if (roleLabel.Text == "cashier")
             {
                 MessageBox.Show("You dont have permission to see this");
+            }
+            else
+            {
+                AddControls(new frmLoyalty());
             }
         }
 

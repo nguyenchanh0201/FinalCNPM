@@ -31,6 +31,7 @@
             this.grp1 = new System.Windows.Forms.GroupBox();
             this.grd = new System.Windows.Forms.DataGridView();
             this.grp2 = new System.Windows.Forms.GroupBox();
+            this.txtRole = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
@@ -41,7 +42,6 @@
             this.grp3 = new System.Windows.Forms.GroupBox();
             this.Delete = new System.Windows.Forms.Button();
             this.Update = new System.Windows.Forms.Button();
-            this.txtRole = new System.Windows.Forms.TextBox();
             this.grp1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grd)).BeginInit();
             this.grp2.SuspendLayout();
@@ -82,6 +82,13 @@
             this.grp2.TabIndex = 1;
             this.grp2.TabStop = false;
             this.grp2.Text = "Infomation";
+            // 
+            // txtRole
+            // 
+            this.txtRole.Location = new System.Drawing.Point(206, 93);
+            this.txtRole.Name = "txtRole";
+            this.txtRole.Size = new System.Drawing.Size(122, 20);
+            this.txtRole.TabIndex = 9;
             // 
             // label4
             // 
@@ -175,13 +182,6 @@
             this.Update.UseVisualStyleBackColor = true;
             this.Update.Click += new System.EventHandler(this.Update_Click);
             // 
-            // txtRole
-            // 
-            this.txtRole.Location = new System.Drawing.Point(206, 93);
-            this.txtRole.Name = "txtRole";
-            this.txtRole.Size = new System.Drawing.Size(122, 20);
-            this.txtRole.TabIndex = 9;
-            // 
             // frmEditAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -191,6 +191,7 @@
             this.Controls.Add(this.grp2);
             this.Controls.Add(this.grp1);
             this.Name = "frmEditAccount";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmEditAccount";
             this.grp1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grd)).EndInit();

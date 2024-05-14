@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -53,6 +54,15 @@ namespace DTO
         public string getGender()
         {
             return gender;
+        }
+        public Customer(DataRow dr)
+        {
+            this.customerID = Convert.ToInt32(dr["id"]);
+            this.customerName = dr["name"].ToString();
+            this.phoneNumber = dr["phoneNum"].ToString();
+            this.points = Convert.ToInt32(dr["points"]);
+            this.rankID = Convert.ToInt32(dr["rankID"]);
+            this.gender = dr["gender"].ToString();
         }
     }
 }

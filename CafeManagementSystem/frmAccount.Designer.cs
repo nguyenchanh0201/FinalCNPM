@@ -31,13 +31,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.bEdit = new System.Windows.Forms.Button();
             this.listAccount = new System.Windows.Forms.ListView();
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnAdd = new System.Windows.Forms.Button();
-            this.bEdit = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -48,7 +48,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1293, 76);
             this.panel1.TabIndex = 4;
@@ -72,13 +72,26 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(0, 76);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(1293, 481);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "List of Account";
+            // 
+            // bEdit
+            // 
+            this.bEdit.BackColor = System.Drawing.Color.RoyalBlue;
+            this.bEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bEdit.Location = new System.Drawing.Point(1109, 40);
+            this.bEdit.Margin = new System.Windows.Forms.Padding(2);
+            this.bEdit.Name = "bEdit";
+            this.bEdit.Size = new System.Drawing.Size(161, 73);
+            this.bEdit.TabIndex = 4;
+            this.bEdit.Text = "Edit";
+            this.bEdit.UseVisualStyleBackColor = false;
+            this.bEdit.Click += new System.EventHandler(this.bEdit_Click);
             // 
             // listAccount
             // 
@@ -90,7 +103,7 @@
             this.listAccount.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.listAccount.HideSelection = false;
             this.listAccount.Location = new System.Drawing.Point(2, 117);
-            this.listAccount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listAccount.Margin = new System.Windows.Forms.Padding(2);
             this.listAccount.Name = "listAccount";
             this.listAccount.Size = new System.Drawing.Size(1289, 362);
             this.listAccount.TabIndex = 3;
@@ -121,27 +134,14 @@
             // 
             this.btnAdd.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(921, 28);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAdd.Location = new System.Drawing.Point(926, 40);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(161, 73);
             this.btnAdd.TabIndex = 2;
             this.btnAdd.Text = "Add Employee";
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click_1);
-            // 
-            // bEdit
-            // 
-            this.bEdit.BackColor = System.Drawing.Color.RoyalBlue;
-            this.bEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bEdit.Location = new System.Drawing.Point(1104, 28);
-            this.bEdit.Margin = new System.Windows.Forms.Padding(2);
-            this.bEdit.Name = "bEdit";
-            this.bEdit.Size = new System.Drawing.Size(161, 73);
-            this.bEdit.TabIndex = 4;
-            this.bEdit.Text = "Edit";
-            this.bEdit.UseVisualStyleBackColor = false;
-            this.bEdit.Click += new System.EventHandler(this.bEdit_Click);
             // 
             // frmAccount
             // 
@@ -151,7 +151,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmAccount";
             this.Text = "frmAccount";
             this.Load += new System.EventHandler(this.frmAccount_Load);

@@ -37,9 +37,9 @@ namespace DTO
 
         public TableCard(DataRow dr)
         {
-            this.tableCardID = dr["ID"].ToString();
-            this.tableName = dr["TableName"].ToString();
-            this.status = dr["Status"].ToString();
+            this.tableCardID = dr["id"].ToString();
+            this.tableName = dr["tableName"].ToString();
+            this.status = dr["status"].ToString();
 
         }
 

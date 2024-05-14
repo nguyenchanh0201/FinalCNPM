@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using DAL;
 using DTO;
+using System.Data;
 
 namespace BLL
 {
@@ -27,15 +30,35 @@ namespace BLL
 
             return daltablecards.getTableCards();
         }
-
-        public void insertTableCard(TableCard tc)
+        public static DataTable select()
         {
-            daltablecards.insertTableCard(tc);
+            if (daltablecards == null)
+            {
+                daltablecards = new DALTableCards("", "", "");
+            }
+            return daltablecards.select();
         }
 
-        public void updateTableCard(TableCard tc)
+        public static void insertTableCard(String tableName)
         {
-            daltablecards.updateTableCard(tc);
+            daltablecards.insertTableCard(tableName);
+        }
+
+        public static void updateTableCard(string tableID,String tableName,String status)
+        {
+            if (daltablecards == null)
+            {
+                daltablecards = new DALTableCards("", "", "");
+            }
+            daltablecards.updateTableCard(tableID, tableName, status);
+        }
+        public static void deleteTableCard(string tableCardID)
+        {
+            if (daltablecards == null)
+            {
+                daltablecards = new DALTableCards("", "", "");
+            }
+            daltablecards.deleteTableCard(tableCardID);
         }
     }
 }

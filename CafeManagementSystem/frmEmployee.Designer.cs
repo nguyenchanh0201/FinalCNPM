@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.centerPanel = new System.Windows.Forms.Panel();
             this.btnAccount = new System.Windows.Forms.Button();
             this.btnRole = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.centerPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -45,30 +45,18 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1545, 72);
+            this.panel2.Size = new System.Drawing.Size(1545, 38);
             this.panel2.TabIndex = 27;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::CafeManagementSystem.Properties.Resources.icons8_employee_80;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1545, 72);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // centerPanel
             // 
             this.centerPanel.Controls.Add(this.btnAccount);
             this.centerPanel.Controls.Add(this.btnRole);
             this.centerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.centerPanel.Location = new System.Drawing.Point(0, 72);
-            this.centerPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.centerPanel.Location = new System.Drawing.Point(0, 30);
+            this.centerPanel.Margin = new System.Windows.Forms.Padding(2);
             this.centerPanel.Name = "centerPanel";
-            this.centerPanel.Size = new System.Drawing.Size(1545, 727);
+            this.centerPanel.Size = new System.Drawing.Size(1545, 768);
             this.centerPanel.TabIndex = 28;
             // 
             // btnAccount
@@ -76,7 +64,7 @@
             this.btnAccount.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAccount.Location = new System.Drawing.Point(961, 212);
-            this.btnAccount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAccount.Margin = new System.Windows.Forms.Padding(2);
             this.btnAccount.Name = "btnAccount";
             this.btnAccount.Size = new System.Drawing.Size(462, 324);
             this.btnAccount.TabIndex = 31;
@@ -89,7 +77,7 @@
             this.btnRole.BackColor = System.Drawing.Color.Salmon;
             this.btnRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRole.Location = new System.Drawing.Point(141, 212);
-            this.btnRole.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRole.Margin = new System.Windows.Forms.Padding(2);
             this.btnRole.Name = "btnRole";
             this.btnRole.Size = new System.Drawing.Size(462, 324);
             this.btnRole.TabIndex = 30;
@@ -97,20 +85,32 @@
             this.btnRole.UseVisualStyleBackColor = false;
             this.btnRole.Click += new System.EventHandler(this.btnRole_Click_1);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::CafeManagementSystem.Properties.Resources.icons8_employee_80;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1545, 38);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1545, 799);
+            this.ClientSize = new System.Drawing.Size(1931, 998);
             this.Controls.Add(this.centerPanel);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmEmployee";
             this.Text = "frmEmployee";
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.centerPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

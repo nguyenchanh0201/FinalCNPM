@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 
 namespace DTO
 {
@@ -13,9 +14,9 @@ namespace DTO
         private string productName;
         private string categoryID;
         private decimal price;
-        private string status;
+        private int  status;
 
-        public Product(string productID, string productName, string categoryID, decimal price, string status)
+        public Product(string productID, string productName, string categoryID, decimal price, int status)
         {
             this.productID = productID;
             this.productName = productName;
@@ -46,24 +47,21 @@ namespace DTO
 
         public string getStatus()
         {
-            if (status == "1")
+            if (status == 1)
             {
-                status = "Active";
+                return "Active";
             }
-            else
-            {
-                status = "Inactive";
-            }
-            return status;
+            
+            return "Inactive";
         }
 
-        public Product(System.Data.DataRow dr)
+        public Product(DataRow dr)
         {
             this.productID = dr["PID"].ToString();
             this.productName = dr["PName"].ToString();
             this.categoryID = dr["CateID"].ToString();
             this.price = decimal.Parse(dr["Price"].ToString());
-            this.status = dr["Status"].ToString();
+            this.status = Convert.ToInt32(dr["Status"]);
         }
     }
 }

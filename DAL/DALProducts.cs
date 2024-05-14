@@ -12,11 +12,15 @@ namespace DAL
     {
         Product p;
 
-        public DALProducts(string productID, string productName, string categoryID, decimal price, string status)
+        public DALProducts(string productID, string productName, string categoryID, decimal price, int status)
         {
             p = new Product(productID, productName, categoryID, price, status);
         }
-
+        public string createProductID()
+        {
+            string sql = "exec GenerateNewProductID";
+            return Connection.selectQuery(sql).Rows[0][0].ToString();
+        }
 
         public List<Product> GetProducts()
         {
@@ -29,34 +33,41 @@ namespace DAL
             return list;
         }
 
-        public void insertProduct(Product p)
+       public void insertProduct(string productName, string categoryID, decimal price)
         {
-            string sql = "insert into products values ('" + p.getProductID() + "','" + p.getProductName() + "','" + p.getCategoryID() + "','" + p.getPrice() + "','" + p.getStatus() + "')";
+            string productID = createProductID();
+            string sql = "insert into Products values('" + productID + "', N'" + productName + "', '" + categoryID + "', " + price + ", 1)";
             Connection.actionQuery(sql);
         }
 
-        public void updateProduct(Product p)
+        public void updateProduct(string productID,string productName, string categoryID, decimal price)
         {
-            string sql = "update products set ProductName = '" + p.getProductName() + "', CategoryID = '" + p.getCategoryID() + "', Price = '" + p.getPrice() + "', Status = '" + p.getStatus() + "' where ProductID = '" + p.getProductID() + "'";
+            string sql = "update Products set pName = N'" + productName + "', cateID = '" + categoryID + "', price";
             Connection.actionQuery(sql);
         }
-        public void deleteProduct(Product p)
+        public void deleteProduct(string productID)
         {
-            string sql = "delete from products where ProductID = '" + p.getProductID() + "'";
-
+            string sql = "delete from Products where PID = '" + productID + "'";
             Connection.actionQuery(sql);
         }
 
         public List<Product> GetProductsByCategory(string categoryName)
         {
-            string sql = "SELECT * FROM Products WHERE CateID in ( select CateID from Categories where CateName = '" + categoryName + "')";
             List<Product> list = new List<Product>();
-            foreach (DataRow dr in Connection.selectQuery(sql).Rows)
+            string sql = "SELECT * FROM Products WHERE cateID = '" + categoryName + "'";
+            DataTable dt = Connection.selectQuery(sql);
+            foreach (DataRow dr in dt.Rows)
             {
-                list.Add(new Product(dr));
+                Product p = new Product(dr);
+                list.Add(p);
             }
             return list;
-        }   
+        }
+        public DataTable select()
+        {
+            string sql = "SELECT * FROM Products";
+            return Connection.selectQuery(sql);
+        }
 
 
 

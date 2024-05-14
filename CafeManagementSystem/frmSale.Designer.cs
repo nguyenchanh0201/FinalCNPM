@@ -32,9 +32,9 @@
             this.bTable = new System.Windows.Forms.Button();
             this.bCustomer = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -95,6 +95,15 @@
             this.panel1.Size = new System.Drawing.Size(1493, 854);
             this.panel1.TabIndex = 18;
             // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(667, 305);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(252, 39);
+            this.label2.TabIndex = 19;
+            this.label2.Text = "Manage Sale";
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -114,15 +123,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(297, 144);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // label2
-            // 
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(667, 305);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(252, 39);
-            this.label2.TabIndex = 19;
-            this.label2.Text = "Manage Sale";
             // 
             // frmSale
             // 

@@ -54,6 +54,7 @@
     <Compile Include="BLLOrderData.cs" />
     <Compile Include="BLLOrderDetails.cs" />
     <Compile Include="BLLProducts.cs" />
+    <Compile Include="BLLRank.cs" />
     <Compile Include="BLLRole.cs" />
     <Compile Include="BLLShift.cs" />
     <Compile Include="BLLTableCards.cs" />

@@ -25,11 +25,6 @@ namespace CafeManagementSystem
 
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-
-        }
-
         public void showGRD()
         {
             listAccount.Items.Clear();

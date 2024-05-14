@@ -72,11 +72,29 @@
     <Compile Include="frmAddAccount.Designer.cs">
       <DependentUpon>frmAddAccount.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAddProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddProduct.Designer.cs">
+      <DependentUpon>frmAddProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddRanks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddRanks.Designer.cs">
+      <DependentUpon>frmAddRanks.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAddRole.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmAddRole.Designer.cs">
       <DependentUpon>frmAddRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddTable.Designer.cs">
+      <DependentUpon>frmAddTable.cs</DependentUpon>
     </Compile>
     <Compile Include="frmCash.cs">
       <SubType>Form</SubType>
@@ -84,11 +102,23 @@
     <Compile Include="frmCash.Designer.cs">
       <DependentUpon>frmCash.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCategory.Designer.cs">
+      <DependentUpon>frmCategory.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmChangePwd.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmChangePwd.Designer.cs">
       <DependentUpon>frmChangePwd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCustomer.Designer.cs">
+      <DependentUpon>frmCustomer.cs</DependentUpon>
     </Compile>
     <Compile Include="frmDetails.cs">
       <SubType>Form</SubType>
@@ -102,17 +132,41 @@
     <Compile Include="frmEditAccount.Designer.cs">
       <DependentUpon>frmEditAccount.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmEditCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditCustomer.Designer.cs">
+      <DependentUpon>frmEditCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmEditOrder.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmEditOrder.Designer.cs">
       <DependentUpon>frmEditOrder.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmEditProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditProduct.Designer.cs">
+      <DependentUpon>frmEditProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditRanks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditRanks.Designer.cs">
+      <DependentUpon>frmEditRanks.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmEditRole.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmEditRole.Designer.cs">
       <DependentUpon>frmEditRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditTableCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditTableCard.Designer.cs">
+      <DependentUpon>frmEditTableCard.cs</DependentUpon>
     </Compile>
     <Compile Include="frmEmployee.cs">
       <SubType>Form</SubType>
@@ -132,11 +186,23 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmLoyalty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLoyalty.Designer.cs">
+      <DependentUpon>frmLoyalty.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenu.Designer.cs">
+      <DependentUpon>frmMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMomo.cs">
       <SubType>Form</SubType>
@@ -162,6 +228,18 @@
     <Compile Include="frmPlaceOrder.Designer.cs">
       <DependentUpon>frmPlaceOrder.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProduct.Designer.cs">
+      <DependentUpon>frmProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRank.Designer.cs">
+      <DependentUpon>frmRank.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmRole.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,6 +258,12 @@
     <Compile Include="frmShift.Designer.cs">
       <DependentUpon>frmShift.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTableCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTableCard.Designer.cs">
+      <DependentUpon>frmTableCard.cs</DependentUpon>
+    </Compile>
     <Compile Include="MoMoSecurity.cs" />
     <Compile Include="PaymentRequest.cs" />
     <Compile Include="Program.cs" />
@@ -190,8 +274,17 @@
     <EmbeddedResource Include="frmAddAccount.resx">
       <DependentUpon>frmAddAccount.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAddProduct.resx">
+      <DependentUpon>frmAddProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddRanks.resx">
+      <DependentUpon>frmAddRanks.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAddRole.resx">
       <DependentUpon>frmAddRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddTable.resx">
+      <DependentUpon>frmAddTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCash.resx">
       <DependentUpon>frmCash.cs</DependentUpon>
@@ -199,17 +292,32 @@
     <EmbeddedResource Include="frmChangePwd.resx">
       <DependentUpon>frmChangePwd.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmCustomer.resx">
+      <DependentUpon>frmCustomer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDetails.resx">
       <DependentUpon>frmDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEditAccount.resx">
       <DependentUpon>frmEditAccount.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmEditCustomer.resx">
+      <DependentUpon>frmEditCustomer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmEditOrder.resx">
       <DependentUpon>frmEditOrder.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmEditProduct.resx">
+      <DependentUpon>frmEditProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditRanks.resx">
+      <DependentUpon>frmEditRanks.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmEditRole.resx">
       <DependentUpon>frmEditRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditTableCard.resx">
+      <DependentUpon>frmEditTableCard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEmployee.resx">
       <DependentUpon>frmEmployee.cs</DependentUpon>
@@ -220,8 +328,14 @@
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmLoyalty.resx">
+      <DependentUpon>frmLoyalty.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenu.resx">
+      <DependentUpon>frmMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMomo.resx">
       <DependentUpon>frmMomo.cs</DependentUpon>
@@ -235,6 +349,12 @@
     <EmbeddedResource Include="frmPlaceOrder.resx">
       <DependentUpon>frmPlaceOrder.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmProduct.resx">
+      <DependentUpon>frmProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRank.resx">
+      <DependentUpon>frmRank.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmRole.resx">
       <DependentUpon>frmRole.cs</DependentUpon>
     </EmbeddedResource>
@@ -243,6 +363,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmShift.resx">
       <DependentUpon>frmShift.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTableCard.resx">
+      <DependentUpon>frmTableCard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

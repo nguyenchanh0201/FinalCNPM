@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DTO;
+using System.Data;
 
 namespace DAL
 {
@@ -26,15 +27,39 @@ namespace DAL
         public void insert(String customerName, String phoneNumber, string gender, int points, int rankID)
         {
             string customerID = createCustomerID();
-            string sql = "insert into Customer values('" + customerID + "', N'" + customerName + "', '" + phoneNumber + "'," + points + ", " + rankID + ")";
+            string sql = "insert into Customers values('" + customerID + "', N'" + customerName + "', '" + phoneNumber + "'," + points + ", " + rankID + ")";
             // Rest of the code
             Connection.actionQuery(sql);
         }
 
-        public void update(String customername, String phoneNumber, String gender)
+        public void update(String customerName, String phoneNumber)
         {
-            string sql = "update Customer set CustomerName = N'" + customername + "', PhoneNumber = '" + phoneNumber + "' where CustomerID = '" + c.getCustomerID() + "'";
+            string sql = "update Customers set customerName = N'" + customerName + "', phoneNumber = '" + phoneNumber + "' where id = '" + c.getCustomerID() + "'";
             Connection.actionQuery(sql);
+        }
+        public void delete(int customerID)
+        {
+            string sql = "delete from Customers where id = '" + customerID + "'";
+            Connection.actionQuery(sql);
+        }
+
+
+        public List<Customer> getCustomer()
+        {
+            List<Customer> list = new List<Customer>();
+            string sql = "select * from Customers";
+            DataTable dt = Connection.selectQuery(sql);
+            foreach (DataRow dr in dt.Rows)
+            {
+                Customer c = new Customer(dr);
+                list.Add(c);
+            }
+            return list;
+        }
+        public DataTable select()
+        {
+            string sql = "select * from Customers";
+            return Connection.selectQuery(sql);
         }
 
 

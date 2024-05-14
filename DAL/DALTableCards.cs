@@ -20,7 +20,7 @@ namespace DAL
         public List<TableCard> getTableCards()
         {
             List<TableCard> list = new List<TableCard>();
-            string sql = "SELECT * FROM TableCards ORDER BY CAST(RIGHT(ID, LEN(ID) - 1) AS INT);";
+            string sql = "SELECT * FROM tableCards ORDER BY CAST(RIGHT(id, LEN(id) - 1) AS INT);";
             DataTable dt = Connection.selectQuery(sql);
             foreach (DataRow dr in dt.Rows)
             {
@@ -29,20 +29,39 @@ namespace DAL
             return list;
 
         }
-
-        public void insertTableCard(TableCard tc)
+        public DataTable select()
         {
-            string sql = "insert into tablecards values ('" + tc.getTableCardID() + "','" + tc.getTableName() + "','" + tc.getStatus() + "')";
+            String sql = "SELECT * FROM tableCards ORDER BY CAST(RIGHT(id, LEN(id) - 1) AS INT);";
+            return Connection.selectQuery(sql);
+        }
+
+        public void insertTableCard(string tableName)
+        {
+            string tableID = createTableID();
+            string sql = "insert into tableCards values('" + tableID + "','" + tableName + "','Empty')";
+
             Connection.actionQuery(sql);
         }
 
-        public void updateTableCard(TableCard tc)
+        public void updateTableCard(String tableID,String tableName,String status)
         {
-            string sql = "update tablecards set TableName = '" + tc.getTableName() + "', Status = '" + tc.getStatus() + "' where TableCardID = '" + tc.getTableCardID() + "'";
+            string sql = "update tableCards set tableName = '" + tableName + "', status = '" + status + "' where id = '" + tableID + "'";
+            Connection.actionQuery(sql);
+        }
+        public void deleteTableCard(string tableID)
+        {
+            string sql = "delete from tableCards where id = '" + tableID + "'";
             Connection.actionQuery(sql);
         }
 
-        
+        public string createTableID()
+        {
+            string sql = "exec GenerateNewTableID";
+            DataTable dt = Connection.selectQuery(sql);
+            return dt.Rows[0][0].ToString();
+
+        }
+
 
     }
 }

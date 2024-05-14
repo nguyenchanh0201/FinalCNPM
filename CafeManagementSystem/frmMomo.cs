@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using Newtonsoft.Json.Linq;
 using ZXing;
 using ZXing.Common;
-using System.Drawing;
+
 using System.Net;
 
 namespace CafeManagementSystem

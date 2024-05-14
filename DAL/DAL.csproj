@@ -47,6 +47,7 @@
     <Compile Include="DALOrderData.cs" />
     <Compile Include="DALOrderDetails.cs" />
     <Compile Include="DALProducts.cs" />
+    <Compile Include="DALRank.cs" />
     <Compile Include="DALRole.cs" />
     <Compile Include="DALShift.cs" />
     <Compile Include="DALTableCards.cs" />
