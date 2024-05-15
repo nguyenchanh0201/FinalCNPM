@@ -30,13 +30,13 @@ namespace BLL
             }
             dalCustomer.insert(customerName, phoneNumber, gender, points, rankID);
         }
-        public static void update(String customerName, String phoneNumber)
+        public static void update(String customerName, String phoneNumber,int customerID)
         {
             if(dalCustomer == null)
             {
                 dalCustomer = new DALCustomer(0, "", "", "", 0, 0);
             }
-            dalCustomer.update(customerName, phoneNumber);
+            dalCustomer.update(customerName, phoneNumber,customerID);
         }
         public static void delete(int customerID)
         {
@@ -62,5 +62,6 @@ namespace BLL
             }
             return dalCustomer.select();
         }
+        
     }
 }

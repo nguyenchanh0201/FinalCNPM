@@ -72,6 +72,12 @@
     <Compile Include="frmAddAccount.Designer.cs">
       <DependentUpon>frmAddAccount.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAddCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddCategory.Designer.cs">
+      <DependentUpon>frmAddCategory.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAddProduct.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +137,12 @@
     </Compile>
     <Compile Include="frmEditAccount.Designer.cs">
       <DependentUpon>frmEditAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditCategory.Designer.cs">
+      <DependentUpon>frmEditCategory.cs</DependentUpon>
     </Compile>
     <Compile Include="frmEditCustomer.cs">
       <SubType>Form</SubType>
@@ -274,6 +286,9 @@
     <EmbeddedResource Include="frmAddAccount.resx">
       <DependentUpon>frmAddAccount.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAddCategory.resx">
+      <DependentUpon>frmAddCategory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAddProduct.resx">
       <DependentUpon>frmAddProduct.cs</DependentUpon>
     </EmbeddedResource>
@@ -289,6 +304,9 @@
     <EmbeddedResource Include="frmCash.resx">
       <DependentUpon>frmCash.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmCategory.resx">
+      <DependentUpon>frmCategory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmChangePwd.resx">
       <DependentUpon>frmChangePwd.cs</DependentUpon>
     </EmbeddedResource>
@@ -300,6 +318,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmEditAccount.resx">
       <DependentUpon>frmEditAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditCategory.resx">
+      <DependentUpon>frmEditCategory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEditCustomer.resx">
       <DependentUpon>frmEditCustomer.cs</DependentUpon>

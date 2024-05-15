@@ -48,10 +48,10 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(0, 76);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox1.Size = new System.Drawing.Size(1293, 492);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Size = new System.Drawing.Size(1494, 492);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "List of Role";
@@ -61,7 +61,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.RoyalBlue;
             this.button1.Location = new System.Drawing.Point(1322, 20);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(158, 65);
             this.button1.TabIndex = 3;
@@ -77,9 +77,9 @@
             this.listRole.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.listRole.HideSelection = false;
             this.listRole.Location = new System.Drawing.Point(2, 101);
-            this.listRole.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listRole.Margin = new System.Windows.Forms.Padding(2);
             this.listRole.Name = "listRole";
-            this.listRole.Size = new System.Drawing.Size(1289, 389);
+            this.listRole.Size = new System.Drawing.Size(1490, 389);
             this.listRole.TabIndex = 2;
             this.listRole.UseCompatibleStateImageBehavior = false;
             this.listRole.View = System.Windows.Forms.View.Details;
@@ -100,7 +100,7 @@
             // 
             this.btnAdd.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnAdd.Location = new System.Drawing.Point(981, 20);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(177, 73);
             this.btnAdd.TabIndex = 1;
@@ -114,9 +114,9 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1293, 76);
+            this.panel1.Size = new System.Drawing.Size(1494, 76);
             this.panel1.TabIndex = 6;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -136,11 +136,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1293, 606);
+            this.ClientSize = new System.Drawing.Size(1494, 606);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmRole";
             this.Text = "frmRole";
             this.groupBox1.ResumeLayout(false);

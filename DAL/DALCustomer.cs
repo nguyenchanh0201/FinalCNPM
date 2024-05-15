@@ -32,9 +32,9 @@ namespace DAL
             Connection.actionQuery(sql);
         }
 
-        public void update(String customerName, String phoneNumber)
+        public void update(String customerName, String phoneNumber, int customerID)
         {
-            string sql = "update Customers set customerName = N'" + customerName + "', phoneNumber = '" + phoneNumber + "' where id = '" + c.getCustomerID() + "'";
+            string sql = "update Customers set name = N'" + customerName + "', phoneNum = '" + phoneNumber + "' where id = '" + customerID + "'";
             Connection.actionQuery(sql);
         }
         public void delete(int customerID)

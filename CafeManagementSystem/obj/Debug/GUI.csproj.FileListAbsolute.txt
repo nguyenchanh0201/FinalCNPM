@@ -220,3 +220,10 @@ C:\Users\Admin\Source\Repos\CNPM\CafeManagementSystem\obj\Debug\CafeManagementSy
 C:\Users\Admin\Source\Repos\CNPM\CafeManagementSystem\obj\Debug\CafeManagementSystem.frmEditRanks.resources
 C:\Users\Admin\Source\Repos\CNPM\CafeManagementSystem\obj\Debug\CafeManagementSystem.frmLoyalty.resources
 C:\Users\Admin\Source\Repos\CNPM\CafeManagementSystem\obj\Debug\CafeManagementSystem.frmRank.resources
+C:\Users\Admin\Source\Repos\CNPM\CafeManagementSystem\obj\Debug\CafeManagementSystem.frmAddCategory.resources
+C:\Users\Admin\Source\Repos\CNPM\CafeManagementSystem\obj\Debug\CafeManagementSystem.frmAddProduct.resources
+C:\Users\Admin\Source\Repos\CNPM\CafeManagementSystem\obj\Debug\CafeManagementSystem.frmCategory.resources
+C:\Users\Admin\Source\Repos\CNPM\CafeManagementSystem\obj\Debug\CafeManagementSystem.frmEditCategory.resources
+C:\Users\Admin\Source\Repos\CNPM\CafeManagementSystem\obj\Debug\CafeManagementSystem.frmEditProduct.resources
+C:\Users\Admin\Source\Repos\CNPM\CafeManagementSystem\obj\Debug\CafeManagementSystem.frmMenu.resources
+C:\Users\Admin\Source\Repos\CNPM\CafeManagementSystem\obj\Debug\CafeManagementSystem.frmProduct.resources

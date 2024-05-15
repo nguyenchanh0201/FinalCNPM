@@ -60,6 +60,7 @@
             this.btnCategory.TabIndex = 31;
             this.btnCategory.Text = "Manager Categories";
             this.btnCategory.UseVisualStyleBackColor = false;
+            this.btnCategory.Click += new System.EventHandler(this.btnCategory_Click);
             // 
             // btnProduct
             // 

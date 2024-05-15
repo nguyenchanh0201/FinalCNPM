@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             this.grp2 = new System.Windows.Forms.GroupBox();
+            this.Role = new System.Windows.Forms.Label();
+            this.txtID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.grp1 = new System.Windows.Forms.GroupBox();
+            this.grd = new System.Windows.Forms.DataGridView();
             this.grp3 = new System.Windows.Forms.GroupBox();
             this.Delete = new System.Windows.Forms.Button();
             this.Update = new System.Windows.Forms.Button();
-            this.grd = new System.Windows.Forms.DataGridView();
-            this.Role = new System.Windows.Forms.Label();
-            this.txtID = new System.Windows.Forms.TextBox();
             this.grp2.SuspendLayout();
             this.grp1.SuspendLayout();
-            this.grp3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grd)).BeginInit();
+            this.grp3.SuspendLayout();
             this.SuspendLayout();
             // 
             // grp2
@@ -58,6 +58,25 @@
             this.grp2.Text = "Infomation";
             this.grp2.Enter += new System.EventHandler(this.grp2_Enter);
             // 
+            // Role
+            // 
+            this.Role.AutoSize = true;
+            this.Role.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Role.Location = new System.Drawing.Point(201, 27);
+            this.Role.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Role.Name = "Role";
+            this.Role.Size = new System.Drawing.Size(93, 29);
+            this.Role.TabIndex = 3;
+            this.Role.Text = "ID Role";
+            // 
+            // txtID
+            // 
+            this.txtID.Location = new System.Drawing.Point(206, 58);
+            this.txtID.Margin = new System.Windows.Forms.Padding(2);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(175, 20);
+            this.txtID.TabIndex = 2;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -72,7 +91,7 @@
             // txtName
             // 
             this.txtName.Location = new System.Drawing.Point(16, 58);
-            this.txtName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtName.Margin = new System.Windows.Forms.Padding(2);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(175, 20);
             this.txtName.TabIndex = 0;
@@ -86,6 +105,16 @@
             this.grp1.TabIndex = 3;
             this.grp1.TabStop = false;
             this.grp1.Text = "List";
+            // 
+            // grd
+            // 
+            this.grd.BackgroundColor = System.Drawing.Color.White;
+            this.grd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grd.GridColor = System.Drawing.Color.Gray;
+            this.grd.Location = new System.Drawing.Point(7, 19);
+            this.grd.Name = "grd";
+            this.grd.Size = new System.Drawing.Size(380, 190);
+            this.grd.TabIndex = 1;
             // 
             // grp3
             // 
@@ -118,35 +147,6 @@
             this.Update.UseVisualStyleBackColor = true;
             this.Update.Click += new System.EventHandler(this.Update_Click);
             // 
-            // grd
-            // 
-            this.grd.BackgroundColor = System.Drawing.Color.White;
-            this.grd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grd.GridColor = System.Drawing.Color.Gray;
-            this.grd.Location = new System.Drawing.Point(7, 19);
-            this.grd.Name = "grd";
-            this.grd.Size = new System.Drawing.Size(380, 190);
-            this.grd.TabIndex = 1;
-            // 
-            // Role
-            // 
-            this.Role.AutoSize = true;
-            this.Role.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Role.Location = new System.Drawing.Point(201, 27);
-            this.Role.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Role.Name = "Role";
-            this.Role.Size = new System.Drawing.Size(93, 29);
-            this.Role.TabIndex = 3;
-            this.Role.Text = "ID Role";
-            // 
-            // txtID
-            // 
-            this.txtID.Location = new System.Drawing.Point(206, 58);
-            this.txtID.Margin = new System.Windows.Forms.Padding(2);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(175, 20);
-            this.txtID.TabIndex = 2;
-            // 
             // frmEditRole
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -157,13 +157,13 @@
             this.Controls.Add(this.grp3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "frmEditRole";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmEditRole";
             this.grp2.ResumeLayout(false);
             this.grp2.PerformLayout();
             this.grp1.ResumeLayout(false);
-            this.grp3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grd)).EndInit();
+            this.grp3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

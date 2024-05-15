@@ -40,7 +40,13 @@ namespace CafeManagementSystem
         {
             String username = txtuser.Text;
             String name = txtName.Text;
-            String phone = txtPhone.Text;   
+            String phone = txtPhone.Text;
+            //Yes-No Message
+            DialogResult result = MessageBox.Show("Do you want to update this account?", "Update", MessageBoxButtons.YesNo);
+            if (result == DialogResult.No)
+            {
+                return;
+            }
             BLLUsers.update(username, name, phone);
             MessageBox.Show("Update success");
             grd.Refresh();

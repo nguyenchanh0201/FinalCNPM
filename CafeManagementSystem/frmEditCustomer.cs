@@ -45,7 +45,8 @@ namespace CafeManagementSystem
         {
             string customerName = txtName.Text;
             string phoneNumber = txtPhone.Text;
-            BLLCustomer.update(customerName, phoneNumber);
+            int customerID = Convert.ToInt32(txtID.Text);
+            BLLCustomer.update(customerName, phoneNumber,customerID);
             MessageBox.Show("Update success");
             grd.Refresh();
         }

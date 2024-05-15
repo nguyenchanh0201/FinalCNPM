@@ -317,6 +317,7 @@
             this.Controls.Add(this.grp1);
             this.Controls.Add(this.grp3);
             this.Name = "frmEditOrder";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmEditOrder";
             this.grp2.ResumeLayout(false);
             this.grp2.PerformLayout();

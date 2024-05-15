@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.grp2 = new System.Windows.Forms.GroupBox();
+            this.txtCateID = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.txtStatus = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -42,8 +44,6 @@
             this.grp3 = new System.Windows.Forms.GroupBox();
             this.Delete = new System.Windows.Forms.Button();
             this.Update = new System.Windows.Forms.Button();
-            this.txtCateID = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.grp2.SuspendLayout();
             this.grp1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grd)).BeginInit();
@@ -68,6 +68,23 @@
             this.grp2.TabIndex = 4;
             this.grp2.TabStop = false;
             this.grp2.Text = "Infomation";
+            // 
+            // txtCateID
+            // 
+            this.txtCateID.Location = new System.Drawing.Point(206, 89);
+            this.txtCateID.Name = "txtCateID";
+            this.txtCateID.Size = new System.Drawing.Size(122, 20);
+            this.txtCateID.TabIndex = 11;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(203, 69);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(82, 17);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Category ID";
             // 
             // txtStatus
             // 
@@ -184,23 +201,6 @@
             this.Update.Text = "Update";
             this.Update.UseVisualStyleBackColor = true;
             // 
-            // txtCateID
-            // 
-            this.txtCateID.Location = new System.Drawing.Point(206, 89);
-            this.txtCateID.Name = "txtCateID";
-            this.txtCateID.Size = new System.Drawing.Size(122, 20);
-            this.txtCateID.TabIndex = 11;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(203, 69);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(82, 17);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Category ID";
-            // 
             // frmEditProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -210,6 +210,7 @@
             this.Controls.Add(this.grp1);
             this.Controls.Add(this.grp3);
             this.Name = "frmEditProduct";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmEditProduct";
             this.grp2.ResumeLayout(false);
             this.grp2.PerformLayout();

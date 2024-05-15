@@ -12,7 +12,7 @@ namespace BLL
     {
         static DALProducts dalproducts;
 
-        public BLLProducts(string productID, string productName, string categoryID,  decimal price, string status)
+        public BLLProducts(string productID, string productName, string categoryID,  decimal price, int status)
         {
             dalproducts = new DALProducts(productID, productName, categoryID, price, status);
         }
@@ -21,7 +21,7 @@ namespace BLL
         {
             if (dalproducts == null)
             {
-                dalproducts = new DALProducts("", "", "", 0, "");
+                dalproducts = new DALProducts("", "", "", 0, 1);
             }
             return dalproducts.GetProducts();
         }
@@ -29,16 +29,16 @@ namespace BLL
 
         public void insertProduct(Product p)
         {
-            dalproducts.insertProduct(p);
+            
         }
         public void updateProduct(Product p)
         {
-            dalproducts.updateProduct(p);
+            
         }
 
         public void deleteProduct(Product p)
         {
-            dalproducts.deleteProduct(p);
+            
         }
 
 

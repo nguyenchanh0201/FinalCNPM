@@ -51,8 +51,9 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 100);
+            this.panel1.Size = new System.Drawing.Size(533, 65);
             this.panel1.TabIndex = 6;
             // 
             // label1
@@ -60,7 +61,8 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label1.Location = new System.Drawing.Point(304, 37);
+            this.label1.Location = new System.Drawing.Point(182, 20);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(203, 29);
             this.label1.TabIndex = 0;
@@ -71,17 +73,19 @@
             this.panel2.Controls.Add(this.btnClose);
             this.panel2.Controls.Add(this.btnSave);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 349);
+            this.panel2.Location = new System.Drawing.Point(0, 227);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(800, 100);
+            this.panel2.Size = new System.Drawing.Size(533, 65);
             this.panel2.TabIndex = 9;
             // 
             // btnClose
             // 
             this.btnClose.BackColor = System.Drawing.Color.Cyan;
-            this.btnClose.Location = new System.Drawing.Point(256, 15);
+            this.btnClose.Location = new System.Drawing.Point(171, 10);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(140, 72);
+            this.btnClose.Size = new System.Drawing.Size(93, 47);
             this.btnClose.TabIndex = 1;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = false;
@@ -90,9 +94,10 @@
             // btnSave
             // 
             this.btnSave.BackColor = System.Drawing.Color.Red;
-            this.btnSave.Location = new System.Drawing.Point(64, 15);
+            this.btnSave.Location = new System.Drawing.Point(43, 10);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(129, 72);
+            this.btnSave.Size = new System.Drawing.Size(86, 47);
             this.btnSave.TabIndex = 0;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
@@ -100,75 +105,82 @@
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(64, 152);
+            this.txtUsername.Location = new System.Drawing.Point(43, 99);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(222, 26);
+            this.txtUsername.Size = new System.Drawing.Size(149, 20);
             this.txtUsername.TabIndex = 8;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(60, 129);
+            this.label2.Location = new System.Drawing.Point(40, 84);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 20);
+            this.label2.Size = new System.Drawing.Size(58, 13);
             this.label2.TabIndex = 7;
             this.label2.Text = "User name";
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(472, 152);
+            this.txtName.Location = new System.Drawing.Point(315, 99);
+            this.txtName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(222, 26);
+            this.txtName.Size = new System.Drawing.Size(149, 20);
             this.txtName.TabIndex = 11;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(468, 129);
+            this.label3.Location = new System.Drawing.Point(312, 84);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 20);
+            this.label3.Size = new System.Drawing.Size(35, 13);
             this.label3.TabIndex = 10;
             this.label3.Text = "Name";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(468, 217);
+            this.label4.Location = new System.Drawing.Point(312, 141);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(42, 20);
+            this.label4.Size = new System.Drawing.Size(29, 13);
             this.label4.TabIndex = 12;
             this.label4.Text = "Role";
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(64, 240);
+            this.txtPhone.Location = new System.Drawing.Point(43, 156);
+            this.txtPhone.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(222, 26);
+            this.txtPhone.Size = new System.Drawing.Size(149, 20);
             this.txtPhone.TabIndex = 15;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(60, 217);
+            this.label5.Location = new System.Drawing.Point(40, 141);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(55, 20);
+            this.label5.Size = new System.Drawing.Size(38, 13);
             this.label5.TabIndex = 14;
             this.label5.Text = "Phone";
             // 
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(472, 242);
+            this.listBox1.Location = new System.Drawing.Point(315, 157);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(222, 24);
+            this.listBox1.Size = new System.Drawing.Size(149, 17);
             this.listBox1.TabIndex = 16;
             // 
             // frmAddAccount
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 449);
+            this.ClientSize = new System.Drawing.Size(533, 292);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.txtPhone);
             this.Controls.Add(this.label5);
@@ -179,7 +191,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.label2);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmAddAccount";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAddAccount";

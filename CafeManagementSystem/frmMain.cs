@@ -80,7 +80,7 @@ namespace CafeManagementSystem
             }
             else
             {
-
+                AddControls(new frmMenu());
             }
         }
 
