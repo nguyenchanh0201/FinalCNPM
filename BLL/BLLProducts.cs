@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,22 +27,42 @@ namespace BLL
             return dalproducts.GetProducts();
         }
 
-
-        public void insertProduct(Product p)
+        public static DataTable select ()
         {
-            
-        }
-        public void updateProduct(Product p)
-        {
-            
-        }
-
-        public void deleteProduct(Product p)
-        {
-            
+            if (dalproducts == null )
+            {
+                dalproducts = new DALProducts("", "", "", 0, 1);
+            }
+            return dalproducts.select();
         }
 
 
+        public static void insert(string productName, string categoryID, decimal price)
+        {
+            if (dalproducts == null)
+            {
+                dalproducts = new DALProducts("", "", "", 0, 1);
+            }
+            dalproducts.insertProduct(productName, categoryID, price);
+        }
+
+        public static void update(string productID, string productName, string categoryID, decimal price)
+        {
+            if (dalproducts == null)
+            {
+                dalproducts = new DALProducts("", "", "", 0, 1);
+            }
+            dalproducts.updateProduct(productID, productName, categoryID, price);
+        }
+
+        public static void delete(string productID)
+        {
+            if (dalproducts == null)
+            {
+                dalproducts = new DALProducts("", "", "", 0, 1);
+            }
+            dalproducts.deleteProduct(productID);
+        }
         public static List<Product> GetProductsByCategory(string categoryname)
         {
             return dalproducts.GetProductsByCategory(categoryname);

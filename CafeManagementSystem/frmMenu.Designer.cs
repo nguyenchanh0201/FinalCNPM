@@ -73,6 +73,7 @@
             this.btnProduct.TabIndex = 30;
             this.btnProduct.Text = "Manager Products";
             this.btnProduct.UseVisualStyleBackColor = false;
+            this.btnProduct.Click += new System.EventHandler(this.btnProduct_Click);
             // 
             // panel2
             // 

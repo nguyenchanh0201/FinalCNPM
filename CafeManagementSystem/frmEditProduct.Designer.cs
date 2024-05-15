@@ -171,6 +171,7 @@
             this.grd.Name = "grd";
             this.grd.Size = new System.Drawing.Size(562, 190);
             this.grd.TabIndex = 0;
+            this.grd.Click += new System.EventHandler(this.grd_Click);
             // 
             // grp3
             // 
@@ -191,6 +192,7 @@
             this.Delete.TabIndex = 1;
             this.Delete.Text = "Delete";
             this.Delete.UseVisualStyleBackColor = true;
+            this.Delete.Click += new System.EventHandler(this.Delete_Click);
             // 
             // Update
             // 
@@ -200,6 +202,7 @@
             this.Update.TabIndex = 0;
             this.Update.Text = "Update";
             this.Update.UseVisualStyleBackColor = true;
+            this.Update.Click += new System.EventHandler(this.Update_Click);
             // 
             // frmEditProduct
             // 

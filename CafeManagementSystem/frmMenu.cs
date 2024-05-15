@@ -33,5 +33,10 @@ namespace CafeManagementSystem
         {
             AddControls(new frmCategory());
         }
+
+        private void btnProduct_Click(object sender, EventArgs e)
+        {
+            AddControls(new frmProduct());
+        }
     }
 }
