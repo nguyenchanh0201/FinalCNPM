@@ -65,9 +65,13 @@ namespace BLL
         }
         public static List<Product> GetProductsByCategory(string categoryname)
         {
+            if (dalproducts == null)
+            {
+                dalproducts = new DALProducts("", "", "", 0, 1);
+            }
             return dalproducts.GetProductsByCategory(categoryname);
         }
 
-
+        
     }
 }

@@ -105,5 +105,14 @@ namespace BLL
             }
             dalOrderData.delete(orderID);
         }
+
+        public static void updateOrderCustomer(string orderID, int customerID)
+        {
+            if (dalOrderData == null)
+            {
+                dalOrderData = new DALOrderData("", DateTime.Now, 0, "", "", "", "", "", "");
+            }
+            dalOrderData.updateOrderCustomer(orderID, customerID);
+        }
     }
 }

@@ -64,14 +64,14 @@
             this.grp2.Controls.Add(this.txtID);
             this.grp2.Location = new System.Drawing.Point(41, 26);
             this.grp2.Name = "grp2";
-            this.grp2.Size = new System.Drawing.Size(589, 129);
+            this.grp2.Size = new System.Drawing.Size(595, 129);
             this.grp2.TabIndex = 4;
             this.grp2.TabStop = false;
             this.grp2.Text = "Infomation";
             // 
             // txtCateID
             // 
-            this.txtCateID.Location = new System.Drawing.Point(206, 89);
+            this.txtCateID.Location = new System.Drawing.Point(178, 89);
             this.txtCateID.Name = "txtCateID";
             this.txtCateID.Size = new System.Drawing.Size(122, 20);
             this.txtCateID.TabIndex = 11;
@@ -80,7 +80,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(203, 69);
+            this.label5.Location = new System.Drawing.Point(175, 69);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(82, 17);
             this.label5.TabIndex = 10;
@@ -107,7 +107,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(203, 16);
+            this.label3.Location = new System.Drawing.Point(175, 16);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(45, 17);
             this.label3.TabIndex = 5;
@@ -115,16 +115,16 @@
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(206, 36);
+            this.txtName.Location = new System.Drawing.Point(178, 36);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(122, 20);
+            this.txtName.Size = new System.Drawing.Size(349, 20);
             this.txtName.TabIndex = 4;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(402, 16);
+            this.label2.Location = new System.Drawing.Point(402, 69);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(40, 17);
             this.label2.TabIndex = 3;
@@ -132,7 +132,7 @@
             // 
             // txtPrice
             // 
-            this.txtPrice.Location = new System.Drawing.Point(405, 36);
+            this.txtPrice.Location = new System.Drawing.Point(405, 89);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(122, 20);
             this.txtPrice.TabIndex = 2;
@@ -159,7 +159,7 @@
             this.grp1.Controls.Add(this.grd);
             this.grp1.Location = new System.Drawing.Point(34, 236);
             this.grp1.Name = "grp1";
-            this.grp1.Size = new System.Drawing.Size(596, 215);
+            this.grp1.Size = new System.Drawing.Size(602, 215);
             this.grp1.TabIndex = 3;
             this.grp1.TabStop = false;
             this.grp1.Text = "List";
@@ -179,14 +179,14 @@
             this.grp3.Controls.Add(this.Update);
             this.grp3.Location = new System.Drawing.Point(41, 171);
             this.grp3.Name = "grp3";
-            this.grp3.Size = new System.Drawing.Size(589, 59);
+            this.grp3.Size = new System.Drawing.Size(595, 59);
             this.grp3.TabIndex = 5;
             this.grp3.TabStop = false;
             this.grp3.Text = "Action";
             // 
             // Delete
             // 
-            this.Delete.Location = new System.Drawing.Point(381, 19);
+            this.Delete.Location = new System.Drawing.Point(370, 19);
             this.Delete.Name = "Delete";
             this.Delete.Size = new System.Drawing.Size(157, 33);
             this.Delete.TabIndex = 1;

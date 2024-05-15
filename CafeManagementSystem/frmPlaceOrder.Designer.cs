@@ -30,11 +30,15 @@
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.button19 = new System.Windows.Forms.Button();
+            this.button20 = new System.Windows.Forms.Button();
+            this.button21 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.grd = new System.Windows.Forms.DataGridView();
             this.label8 = new System.Windows.Forms.Label();
             this.lbTotal = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -52,14 +56,10 @@
             this.lbOrderID = new System.Windows.Forms.Label();
             this.txtDiscount = new System.Windows.Forms.TextBox();
             this.bApplyDiscount = new System.Windows.Forms.Button();
-            this.grd = new System.Windows.Forms.DataGridView();
             this.bDelete = new System.Windows.Forms.Button();
             this.bEdit = new System.Windows.Forms.Button();
             this.bNewOrder = new System.Windows.Forms.Button();
             this.button33 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.label6 = new System.Windows.Forms.Label();
@@ -86,6 +86,36 @@
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(337, 121);
             this.flowLayoutPanel2.TabIndex = 1;
+            // 
+            // button19
+            // 
+            this.button19.Image = global::CafeManagementSystem.Properties.Resources.icons8_take_away_60;
+            this.button19.Location = new System.Drawing.Point(3, 3);
+            this.button19.Name = "button19";
+            this.button19.Size = new System.Drawing.Size(106, 107);
+            this.button19.TabIndex = 16;
+            this.button19.UseVisualStyleBackColor = true;
+            this.button19.Click += new System.EventHandler(this.button19_Click);
+            // 
+            // button20
+            // 
+            this.button20.Image = global::CafeManagementSystem.Properties.Resources.icons8_restaurant_table_60;
+            this.button20.Location = new System.Drawing.Point(115, 3);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(101, 107);
+            this.button20.TabIndex = 17;
+            this.button20.UseVisualStyleBackColor = true;
+            this.button20.Click += new System.EventHandler(this.button20_Click);
+            // 
+            // button21
+            // 
+            this.button21.Image = global::CafeManagementSystem.Properties.Resources.icons8_shipping_64;
+            this.button21.Location = new System.Drawing.Point(222, 3);
+            this.button21.Name = "button21";
+            this.button21.Size = new System.Drawing.Size(107, 107);
+            this.button21.TabIndex = 18;
+            this.button21.UseVisualStyleBackColor = true;
+            this.button21.Click += new System.EventHandler(this.button21_Click);
             // 
             // label2
             // 
@@ -128,6 +158,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(664, 813);
             this.panel1.TabIndex = 17;
+            // 
+            // grd
+            // 
+            this.grd.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.grd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grd.Location = new System.Drawing.Point(4, 4);
+            this.grd.Name = "grd";
+            this.grd.Size = new System.Drawing.Size(657, 806);
+            this.grd.TabIndex = 0;
+            this.grd.Click += new System.EventHandler(this.grd_Click);
             // 
             // label8
             // 
@@ -181,7 +221,7 @@
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(710, 9);
+            this.label3.Location = new System.Drawing.Point(578, 9);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(148, 26);
             this.label3.TabIndex = 21;
@@ -285,16 +325,6 @@
             this.bApplyDiscount.Text = "Apply";
             this.bApplyDiscount.UseVisualStyleBackColor = true;
             // 
-            // grd
-            // 
-            this.grd.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.grd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grd.Location = new System.Drawing.Point(4, 4);
-            this.grd.Name = "grd";
-            this.grd.Size = new System.Drawing.Size(657, 806);
-            this.grd.TabIndex = 0;
-            this.grd.Click += new System.EventHandler(this.grd_Click);
-            // 
             // bDelete
             // 
             this.bDelete.BackgroundImage = global::CafeManagementSystem.Properties.Resources.icons8_delete_301;
@@ -339,36 +369,6 @@
             this.button33.TabIndex = 20;
             this.button33.UseVisualStyleBackColor = true;
             this.button33.Click += new System.EventHandler(this.button33_Click);
-            // 
-            // button19
-            // 
-            this.button19.Image = global::CafeManagementSystem.Properties.Resources.icons8_take_away_60;
-            this.button19.Location = new System.Drawing.Point(3, 3);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(106, 107);
-            this.button19.TabIndex = 16;
-            this.button19.UseVisualStyleBackColor = true;
-            this.button19.Click += new System.EventHandler(this.button19_Click);
-            // 
-            // button20
-            // 
-            this.button20.Image = global::CafeManagementSystem.Properties.Resources.icons8_restaurant_table_60;
-            this.button20.Location = new System.Drawing.Point(115, 3);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(101, 107);
-            this.button20.TabIndex = 17;
-            this.button20.UseVisualStyleBackColor = true;
-            this.button20.Click += new System.EventHandler(this.button20_Click);
-            // 
-            // button21
-            // 
-            this.button21.Image = global::CafeManagementSystem.Properties.Resources.icons8_shipping_64;
-            this.button21.Location = new System.Drawing.Point(222, 3);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(107, 107);
-            this.button21.TabIndex = 18;
-            this.button21.UseVisualStyleBackColor = true;
-            this.button21.Click += new System.EventHandler(this.button21_Click);
             // 
             // dataGridViewImageColumn1
             // 

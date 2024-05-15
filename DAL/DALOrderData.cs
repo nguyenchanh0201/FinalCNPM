@@ -105,6 +105,12 @@ namespace DAL
             Connection.actionQuery(sql);
         }
 
+        public void updateOrderCustomer(string orderID, int customerID)
+        {
+            string sql = "update Orders set customerID = '" + customerID + "' where orderID = '" + orderID + "'";
+            Connection.actionQuery(sql);
+        }
+
 
 
 

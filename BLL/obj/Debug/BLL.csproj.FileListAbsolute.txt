@@ -50,3 +50,7 @@ C:\Users\Admin\Source\Repos\CNPM\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cach
 C:\Users\Admin\Source\Repos\CNPM\BLL\obj\Debug\BLL.csproj.CopyComplete
 C:\Users\Admin\Source\Repos\CNPM\BLL\obj\Debug\BLL.dll
 C:\Users\Admin\Source\Repos\CNPM\BLL\obj\Debug\BLL.pdb
+C:\Users\ASUS\Source\Repos\FinalCNPM\BLL\bin\Debug\log4net.dll
+C:\Users\ASUS\Source\Repos\FinalCNPM\BLL\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ASUS\Source\Repos\FinalCNPM\BLL\bin\Debug\log4net.xml
+C:\Users\ASUS\Source\Repos\FinalCNPM\BLL\bin\Debug\Newtonsoft.Json.xml

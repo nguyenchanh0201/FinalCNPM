@@ -62,6 +62,15 @@ namespace BLL
             }
             return dalCustomer.select();
         }
+
+        public static List<Customer> getCustomerByPhone(string phoneNum)
+        {
+            if (dalCustomer == null)
+            {
+                dalCustomer = new DALCustomer(0, "", "", "", 0, 0);
+            }
+            return dalCustomer.getCustomerByPhone(phoneNum);
+        }
         
     }
 }

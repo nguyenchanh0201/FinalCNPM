@@ -60,5 +60,14 @@ namespace BLL
             }
             daltablecards.deleteTableCard(tableCardID);
         }
+
+        public static void changeStatus(string tableID, string status)
+        {
+            if (daltablecards == null)
+            {
+                daltablecards = new DALTableCards("", "", "");
+            }
+            daltablecards.changeStatus(tableID, status);
+        }
     }
 }

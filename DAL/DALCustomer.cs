@@ -26,8 +26,9 @@ namespace DAL
 
         public void insert(String customerName, String phoneNumber, string gender, int points, int rankID)
         {
+            string rankID1 = rankID.ToString();
             string customerID = createCustomerID();
-            string sql = "insert into Customers values('" + customerID + "', N'" + customerName + "', '" + phoneNumber + "'," + points + ", " + rankID + ")";
+            string sql = "insert into Customers values('" + customerID + "', N'" + customerName + "', '" + phoneNumber + "','" + gender + "'," + points + ", " + rankID1 + ")";
             // Rest of the code
             Connection.actionQuery(sql);
         }
@@ -60,6 +61,19 @@ namespace DAL
         {
             string sql = "select * from Customers";
             return Connection.selectQuery(sql);
+        }
+
+        public List<Customer> getCustomerByPhone(string phoneNumber)
+        {
+            string sql = "select * from Customers where phoneNum = '" + phoneNumber + "'";
+            List<Customer> list = new List<Customer>();
+            DataTable dt = Connection.selectQuery(sql);
+            foreach (DataRow dr in dt.Rows)
+            {
+                Customer c = new Customer(dr);
+                list.Add(c);
+            }
+            return list;
         }
 
 

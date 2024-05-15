@@ -15,7 +15,7 @@ namespace CafeManagementSystem
     
     public partial class frmPlaceOrder : Form
     {
-        String tableID;
+        public static String tableID;
         public static string orderID;
         public static decimal total;
         BLLOrderData bLLOrderData = new BLLOrderData("", DateTime.Now, 0, "", "", "", "", "" , "");
@@ -28,6 +28,32 @@ namespace CafeManagementSystem
 
         private void bpayment_Click(object sender, EventArgs e)
         {
+
+            //Check if customerID is 0 
+            //If yes, show message box to ask if they want to create new customer or not then open frmMembership
+            //If no, open frmPayment
+            if (bLLOrderData.getCustomerID() == "0")
+            {
+                DialogResult result = MessageBox.Show("Do you want to create new customer?", "Create new customer", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    frmMemberShip frmMemberShip = new frmMemberShip();
+                    frmMemberShip.ShowDialog();
+                }
+                else
+                {
+                    return;
+                }
+            }
+
+
+
+
+
+            flowLayoutPanel1.Enabled = false;
+            flowLayoutPanel2.Enabled = false;
+            bNewOrder.Enabled = false;
+
             total = Convert.ToDecimal(lbTotal.Text);
             frmPayment
                 frm = new frmPayment();
@@ -58,6 +84,11 @@ namespace CafeManagementSystem
 
                 btn.ImageAlign = ContentAlignment.TopCenter;
                 btn.TextAlign = ContentAlignment.BottomCenter;
+
+                if (tc.getStatus() == "Taken")
+                    btn.BackColor = Color.Red;
+                
+
                 //Create event handler for each button
                 btn.Click += new EventHandler((sender, e) => btnTable_Click(sender, e, tc.getTableName()));
                 flowLayoutPanel1.Controls.Add(btn);
@@ -100,6 +131,25 @@ namespace CafeManagementSystem
 
         private void btnTable_Click(object sender, EventArgs e, string tableName)
         {
+            //Check if the table back color is red or not 
+            if (((Button)sender).BackColor == Color.Red)
+            {
+                //UnTake the table option yes, no 
+                DialogResult result = MessageBox.Show("Do you want to untake this table?", "Untake", MessageBoxButtons.YesNo);
+                BLLTableCards.changeStatus(((Button)sender).Name, "Taken");
+                if (result == DialogResult.Yes)
+                {
+                    ((Button)sender).BackColor = Color.White;
+                    return;
+                }
+                else
+                {
+                    return;
+                }
+                
+            }
+
+
             lbTable.Text = tableName;
             tableID = ((Button)sender).Name;
             bNewOrder.Enabled = true;
@@ -206,6 +256,8 @@ namespace CafeManagementSystem
         private void button32_Click(object sender, EventArgs e)
         {
             //Create membership ( Search for customer phoneNum, then if exist add to the order, else create new one and add, else let customerID is 0 
+            frmMemberShip frmMemberShip = new frmMemberShip();
+            frmMemberShip.ShowDialog();
 
 
         }
@@ -271,5 +323,7 @@ namespace CafeManagementSystem
         {
             lbTotal.Text = caltotal().ToString();
         }
+
+        
     }
 }

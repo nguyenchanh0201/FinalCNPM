@@ -70,6 +70,7 @@ namespace CafeManagementSystem
                 MessageBox.Show("Bill printed successfully");
                 //Close the form
                 BLLOrderData.updatePaymentMethodAndTotal(frmPlaceOrder.orderID, paymentMethod, Convert.ToDecimal(frmPlaceOrder.total));
+                BLLTableCards.changeStatus(frmPlaceOrder.tableID, "Empty");
                 this.Close();
                 foreach (Form form in Application.OpenForms)
                 {
@@ -80,6 +81,7 @@ namespace CafeManagementSystem
                 }
                 frmPlaceOrder frm = new frmPlaceOrder();
                 frm.ShowDialog();
+                
             }
             else if (paymentMethod == "momo")
             {

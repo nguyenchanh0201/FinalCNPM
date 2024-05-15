@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DTO;
 using System.Data;
+using System.Security.Cryptography;
 
 namespace DAL
 {
@@ -62,6 +63,20 @@ namespace DAL
 
         }
 
+        public void changeStatus(string tableID, string status)
+        {
+            if(status == "Empty")
+            {
+                status = "Taken";
+            }
+            else if(status == "Taken")
+            {
+                status = "Empty";
+            }
+
+            string sql = "update tableCards set status = '" + status + "' where id = '" + tableID + "'";
+            Connection.actionQuery(sql);
+        }
 
     }
 }
